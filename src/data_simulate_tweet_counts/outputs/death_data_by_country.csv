@@ -1,0 +1,1764 @@
+date,user_country,n
+2020-08-10,Netherlands,1
+2020-08-11,India,1
+2020-08-11,NA,1
+2020-08-12,United Kingdom,1
+2020-08-12,NA,1
+2020-08-14,India,1
+2020-08-14,United States,1
+2020-08-14,NA,2
+2020-08-15,United States,1
+2020-08-16,United Kingdom,1
+2020-08-16,NA,1
+2020-08-17,NA,1
+2020-08-18,Australia,1
+2020-08-18,Pakistan,1
+2020-08-18,NA,2
+2020-08-19,NA,1
+2020-08-20,India,2
+2020-08-21,India,1
+2020-08-22,NA,1
+2020-08-23,India,1
+2020-08-23,Sri Lanka,1
+2020-08-23,NA,1
+2020-08-25,United States,1
+2020-08-26,NA,1
+2020-08-27,United Arab Emirates,1
+2020-08-29,United States,1
+2020-09-02,Colombia,1
+2020-09-02,United States,1
+2020-09-03,India,1
+2020-09-04,India,1
+2020-09-04,NA,1
+2020-09-05,United States,1
+2020-09-06,United States,1
+2020-09-08,United States,1
+2020-09-08,NA,1
+2020-09-09,India,1
+2020-09-10,Kenya,1
+2020-09-10,NA,1
+2020-09-11,NA,2
+2020-09-14,India,1
+2020-09-15,Australia,1
+2020-09-15,United States,1
+2020-09-16,Saudi Arabia,1
+2020-09-16,NA,1
+2020-09-19,NA,1
+2020-09-21,Colombia,1
+2020-09-22,United Kingdom,1
+2020-09-23,NA,1
+2020-09-27,India,1
+2020-09-29,Russia,1
+2020-09-29,United States,2
+2020-10-01,India,1
+2020-10-11,India,1
+2020-10-12,India,1
+2020-10-13,India,1
+2020-10-13,United States,1
+2020-10-15,United Kingdom,1
+2020-10-15,United States,1
+2020-10-21,India,1
+2020-10-21,United Kingdom,1
+2020-10-22,India,2
+2020-10-22,Philippines,1
+2020-10-22,United Arab Emirates,1
+2020-10-22,United Kingdom,2
+2020-10-22,NA,2
+2020-10-23,Hong Kong SAR China,1
+2020-10-23,United Kingdom,1
+2020-10-23,United States,1
+2020-10-23,NA,1
+2020-11-04,NA,1
+2020-11-05,Australia,1
+2020-11-05,Canada,1
+2020-11-05,India,1
+2020-11-10,Canada,1
+2020-11-10,India,2
+2020-11-10,United Kingdom,5
+2020-11-10,United States,5
+2020-11-10,NA,9
+2020-11-15,United States,1
+2020-11-15,NA,1
+2020-11-16,United Kingdom,2
+2020-11-16,United States,1
+2020-11-16,NA,1
+2020-11-17,India,4
+2020-11-17,Ireland,1
+2020-11-17,Kenya,1
+2020-11-17,United Arab Emirates,1
+2020-11-17,United Kingdom,1
+2020-11-17,NA,1
+2020-11-18,Colombia,1
+2020-11-18,India,1
+2020-11-18,Kenya,1
+2020-11-18,Niger,1
+2020-11-18,United Kingdom,5
+2020-11-18,United States,5
+2020-11-18,NA,6
+2020-11-19,India,1
+2020-11-19,Pakistan,1
+2020-11-19,United States,3
+2020-11-19,NA,3
+2020-11-20,Lebanon,1
+2020-11-20,Turkey,1
+2020-11-20,United Kingdom,1
+2020-11-20,United States,1
+2020-11-21,India,1
+2020-11-21,United States,3
+2020-11-21,NA,1
+2020-11-22,India,1
+2020-11-22,NA,2
+2020-12-25,United States,1
+2020-12-26,United States,2
+2020-12-26,NA,1
+2020-12-27,Australia,1
+2020-12-27,Canada,1
+2020-12-27,United Kingdom,1
+2020-12-27,NA,3
+2020-12-28,Colombia,1
+2020-12-28,India,1
+2020-12-28,South Africa,2
+2020-12-28,Turkey,1
+2020-12-28,United Kingdom,3
+2020-12-28,United States,3
+2020-12-28,NA,14
+2020-12-29,Argentina,1
+2020-12-29,United Kingdom,2
+2020-12-29,United States,4
+2020-12-29,NA,7
+2020-12-30,Australia,1
+2020-12-30,Bulgaria,5
+2020-12-30,Denmark,1
+2020-12-30,Kenya,1
+2020-12-30,Philippines,1
+2020-12-30,United Kingdom,1
+2020-12-30,United States,7
+2020-12-30,NA,14
+2020-12-31,Canada,1
+2020-12-31,Iceland,1
+2020-12-31,Niger,1
+2020-12-31,South Africa,1
+2020-12-31,Spain,1
+2020-12-31,United Kingdom,4
+2020-12-31,United States,8
+2020-12-31,NA,20
+2021-01-01,India,1
+2021-01-01,United Kingdom,3
+2021-01-01,United States,5
+2021-01-01,NA,5
+2021-01-02,India,1
+2021-01-02,United States,2
+2021-01-02,NA,1
+2021-01-08,India,1
+2021-01-08,United Kingdom,1
+2021-01-08,United States,2
+2021-01-08,NA,1
+2021-01-09,Canada,1
+2021-01-09,Hanover,1
+2021-01-09,India,1
+2021-01-09,United Kingdom,3
+2021-01-09,United States,2
+2021-01-09,NA,5
+2021-01-10,India,5
+2021-01-10,United Kingdom,3
+2021-01-10,United States,3
+2021-01-10,NA,7
+2021-01-11,India,2
+2021-01-11,United Kingdom,3
+2021-01-11,United States,1
+2021-01-11,NA,3
+2021-01-12,Denmark,1
+2021-01-12,India,1
+2021-01-12,Ireland,1
+2021-01-12,United States,3
+2021-01-12,NA,4
+2021-01-13,Canada,1
+2021-01-13,India,1
+2021-01-13,Ireland,1
+2021-01-13,United Kingdom,3
+2021-01-13,United States,9
+2021-01-13,NA,10
+2021-01-14,Pakistan,1
+2021-01-14,United Kingdom,7
+2021-01-14,United States,5
+2021-01-14,NA,9
+2021-01-15,Australia,1
+2021-01-15,Canada,2
+2021-01-15,India,3
+2021-01-15,Ireland,2
+2021-01-15,Philippines,1
+2021-01-15,Somalia,1
+2021-01-15,Spain,1
+2021-01-15,United Kingdom,6
+2021-01-15,United States,20
+2021-01-15,NA,8
+2021-01-16,United Kingdom,2
+2021-01-16,United States,3
+2021-01-16,NA,1
+2021-01-19,United States,1
+2021-01-20,Canada,3
+2021-01-20,India,3
+2021-01-20,Kuwait,1
+2021-01-20,Nigeria,1
+2021-01-20,United Kingdom,5
+2021-01-20,United States,8
+2021-01-20,NA,8
+2021-01-21,France,1
+2021-01-21,India,2
+2021-01-21,United Kingdom,3
+2021-01-21,United States,2
+2021-01-21,NA,6
+2021-01-22,Canada,1
+2021-01-22,India,1
+2021-01-22,Ireland,3
+2021-01-22,United Kingdom,2
+2021-01-22,United States,6
+2021-01-22,NA,3
+2021-01-23,India,3
+2021-01-23,Switzerland,1
+2021-01-23,United Kingdom,5
+2021-01-23,United States,13
+2021-01-23,NA,11
+2021-01-24,Georgia,1
+2021-01-24,India,1
+2021-01-24,United Kingdom,3
+2021-01-24,United States,11
+2021-01-24,NA,15
+2021-01-25,Canada,1
+2021-01-25,India,1
+2021-01-25,Portugal,1
+2021-01-25,United Kingdom,6
+2021-01-25,United States,9
+2021-01-25,NA,9
+2021-01-26,Canada,1
+2021-01-26,Colombia,1
+2021-01-26,Germany,1
+2021-01-26,Niger,1
+2021-01-26,United Kingdom,2
+2021-01-26,United States,12
+2021-01-26,NA,15
+2021-01-27,Canada,2
+2021-01-27,Georgia,1
+2021-01-27,Ireland,1
+2021-01-27,Niger,1
+2021-01-27,United Kingdom,11
+2021-01-27,United States,14
+2021-01-27,NA,16
+2021-01-28,India,1
+2021-01-28,Netherlands,1
+2021-01-28,New Zealand,1
+2021-01-28,Philippines,1
+2021-01-28,South Africa,1
+2021-01-28,United Kingdom,5
+2021-01-28,United States,11
+2021-01-28,NA,8
+2021-01-29,Cyprus,1
+2021-01-29,India,3
+2021-01-29,Philippines,1
+2021-01-29,Sri Lanka,1
+2021-01-29,United Kingdom,4
+2021-01-29,United States,7
+2021-01-29,NA,16
+2021-01-30,Australia,1
+2021-01-30,India,1
+2021-01-30,Spain,1
+2021-01-30,United Kingdom,6
+2021-01-30,United States,10
+2021-01-30,NA,20
+2021-01-31,Colombia,1
+2021-01-31,Denmark,2
+2021-01-31,United Kingdom,3
+2021-01-31,United States,7
+2021-01-31,NA,10
+2021-02-01,Canada,1
+2021-02-01,Ghana,1
+2021-02-01,India,1
+2021-02-01,Kenya,1
+2021-02-01,Niger,1
+2021-02-01,Pakistan,1
+2021-02-01,United Kingdom,8
+2021-02-01,United States,7
+2021-02-01,NA,12
+2021-02-02,Canada,2
+2021-02-02,France,1
+2021-02-02,India,1
+2021-02-02,Kenya,1
+2021-02-02,Mexico,1
+2021-02-02,Niger,1
+2021-02-02,South Africa,1
+2021-02-02,Sri Lanka,1
+2021-02-02,United Kingdom,5
+2021-02-02,United States,3
+2021-02-02,NA,8
+2021-02-03,Canada,1
+2021-02-03,India,1
+2021-02-03,Pakistan,1
+2021-02-03,United Arab Emirates,1
+2021-02-03,United Kingdom,4
+2021-02-03,United States,4
+2021-02-03,NA,10
+2021-02-04,Denmark,1
+2021-02-04,India,1
+2021-02-04,United Kingdom,5
+2021-02-04,United States,6
+2021-02-04,NA,7
+2021-02-05,Canada,1
+2021-02-05,India,1
+2021-02-05,Philippines,1
+2021-02-05,United Kingdom,4
+2021-02-05,United States,5
+2021-02-05,NA,3
+2021-02-06,China,1
+2021-02-06,Egypt,1
+2021-02-06,India,3
+2021-02-06,United Kingdom,3
+2021-02-06,United States,5
+2021-02-06,NA,4
+2021-02-07,Canada,1
+2021-02-07,Colombia,1
+2021-02-07,India,1
+2021-02-07,United Kingdom,3
+2021-02-07,United States,4
+2021-02-07,NA,6
+2021-02-08,Canada,1
+2021-02-08,Russia,1
+2021-02-08,United Kingdom,7
+2021-02-08,United States,1
+2021-02-08,Uzbekistan,1
+2021-02-08,NA,9
+2021-02-09,Australia,2
+2021-02-09,United Kingdom,2
+2021-02-09,United States,3
+2021-02-09,NA,9
+2021-02-10,India,3
+2021-02-10,United Kingdom,3
+2021-02-10,United States,3
+2021-02-10,NA,9
+2021-02-11,Greece,1
+2021-02-11,India,1
+2021-02-11,Ireland,1
+2021-02-11,Kenya,1
+2021-02-11,Philippines,1
+2021-02-11,United Kingdom,2
+2021-02-11,United States,6
+2021-02-11,NA,8
+2021-02-12,Italy,1
+2021-02-12,United Kingdom,2
+2021-02-12,United States,6
+2021-02-12,NA,8
+2021-02-13,India,1
+2021-02-13,Ireland,2
+2021-02-13,Oman,1
+2021-02-13,Somalia,3
+2021-02-13,Ukraine,1
+2021-02-13,United Kingdom,2
+2021-02-13,NA,3
+2021-02-14,India,1
+2021-02-14,Rwanda,1
+2021-02-14,United Kingdom,7
+2021-02-14,United States,3
+2021-02-14,NA,3
+2021-02-15,Australia,1
+2021-02-15,Canada,2
+2021-02-15,India,1
+2021-02-15,Ireland,2
+2021-02-15,United Kingdom,1
+2021-02-15,United States,4
+2021-02-15,NA,3
+2021-02-16,India,1
+2021-02-16,Ireland,1
+2021-02-16,United Kingdom,6
+2021-02-16,United States,1
+2021-02-16,NA,7
+2021-02-17,Australia,1
+2021-02-17,Ireland,1
+2021-02-17,United Kingdom,3
+2021-02-17,United States,3
+2021-02-17,NA,11
+2021-02-18,India,1
+2021-02-18,United Kingdom,1
+2021-02-18,United States,4
+2021-02-18,NA,12
+2021-02-19,Bhutan,1
+2021-02-19,Canada,1
+2021-02-19,United Kingdom,5
+2021-02-19,United States,4
+2021-02-19,NA,10
+2021-02-20,Australia,1
+2021-02-20,Ireland,1
+2021-02-20,United Kingdom,4
+2021-02-20,United States,5
+2021-02-20,NA,9
+2021-02-21,Australia,1
+2021-02-21,India,1
+2021-02-21,United Kingdom,3
+2021-02-21,United States,3
+2021-02-21,NA,6
+2021-02-22,Canada,2
+2021-02-22,Italy,1
+2021-02-22,United Kingdom,2
+2021-02-22,United States,2
+2021-02-22,NA,7
+2021-02-23,Kuwait,1
+2021-02-23,Spain,1
+2021-02-23,United Kingdom,4
+2021-02-23,United States,8
+2021-02-23,NA,8
+2021-02-24,Bahrain,1
+2021-02-24,Bangladesh,1
+2021-02-24,Jersey,1
+2021-02-24,United Kingdom,3
+2021-02-24,United States,7
+2021-02-24,NA,5
+2021-02-25,Canada,1
+2021-02-25,Norfolk Island,1
+2021-02-25,United Kingdom,2
+2021-02-25,United States,8
+2021-02-25,NA,4
+2021-02-26,Canada,1
+2021-02-26,Spain,1
+2021-02-26,United Kingdom,2
+2021-02-26,United States,3
+2021-02-26,NA,4
+2021-02-27,Georgia,1
+2021-02-27,United States,4
+2021-02-27,NA,5
+2021-02-28,United Kingdom,2
+2021-02-28,United States,3
+2021-02-28,NA,2
+2021-03-01,United Kingdom,1
+2021-03-01,United States,1
+2021-03-01,NA,1
+2021-03-05,Canada,1
+2021-03-05,Sri Lanka,1
+2021-03-05,United Kingdom,5
+2021-03-05,United States,3
+2021-03-05,NA,3
+2021-03-12,Australia,1
+2021-03-12,Pakistan,1
+2021-03-12,Philippines,1
+2021-03-12,United Arab Emirates,1
+2021-03-12,United Kingdom,2
+2021-03-12,United States,3
+2021-03-12,NA,7
+2021-03-13,Antarctica,1
+2021-03-13,India,1
+2021-03-13,Italy,1
+2021-03-13,Turkmenistan,1
+2021-03-13,United States,7
+2021-03-13,NA,6
+2021-03-19,Australia,1
+2021-03-19,India,2
+2021-03-19,Lesotho,1
+2021-03-19,United Kingdom,5
+2021-03-19,United States,4
+2021-03-19,NA,9
+2021-03-20,Canada,2
+2021-03-20,France,1
+2021-03-20,India,1
+2021-03-20,United Kingdom,2
+2021-03-20,United States,4
+2021-03-20,NA,7
+2021-03-21,United States,1
+2021-03-21,NA,2
+2021-03-22,Canada,1
+2021-03-22,India,2
+2021-03-22,Philippines,1
+2021-03-22,United Kingdom,3
+2021-03-22,United States,2
+2021-03-22,NA,7
+2021-03-23,Bangladesh,1
+2021-03-23,United Kingdom,2
+2021-03-23,United States,2
+2021-03-23,NA,4
+2021-03-24,India,1
+2021-03-24,South Africa,1
+2021-03-24,United Kingdom,2
+2021-03-24,United States,5
+2021-03-24,NA,6
+2021-03-25,India,1
+2021-03-25,Kenya,2
+2021-03-25,United Kingdom,2
+2021-03-25,United States,4
+2021-03-25,NA,7
+2021-03-26,Canada,1
+2021-03-26,India,1
+2021-03-26,South Africa,1
+2021-03-26,United Kingdom,1
+2021-03-26,United States,4
+2021-03-26,NA,2
+2021-04-07,United States,2
+2021-04-07,NA,4
+2021-04-08,Iceland,1
+2021-04-08,India,2
+2021-04-08,United Kingdom,5
+2021-04-08,United States,7
+2021-04-08,NA,7
+2021-04-09,Australia,1
+2021-04-09,Canada,1
+2021-04-09,China,1
+2021-04-09,India,3
+2021-04-09,Pakistan,1
+2021-04-09,United Kingdom,2
+2021-04-09,United States,5
+2021-04-09,NA,12
+2021-04-10,Ecuador,1
+2021-04-10,United Kingdom,1
+2021-04-10,United States,7
+2021-04-10,NA,4
+2021-04-11,Bhutan,1
+2021-04-11,Ireland,1
+2021-04-11,United Kingdom,4
+2021-04-11,United States,4
+2021-04-11,NA,4
+2021-04-12,Canada,1
+2021-04-12,NA,3
+2021-04-13,Canada,1
+2021-04-13,India,1
+2021-04-13,United Kingdom,1
+2021-04-13,United States,1
+2021-04-13,NA,4
+2021-04-21,India,1
+2021-04-21,Jersey,1
+2021-04-21,United Kingdom,1
+2021-04-21,United States,4
+2021-04-21,NA,4
+2021-04-22,Canada,1
+2021-04-22,India,2
+2021-04-22,Israel,1
+2021-04-22,United Kingdom,4
+2021-04-22,United States,4
+2021-04-22,NA,5
+2021-04-23,Canada,3
+2021-04-23,India,1
+2021-04-23,United States,2
+2021-04-23,NA,3
+2021-04-24,NA,1
+2021-04-26,Canada,1
+2021-04-26,NA,3
+2021-04-27,India,2
+2021-04-27,United Kingdom,6
+2021-04-27,United States,3
+2021-04-27,NA,4
+2021-04-28,Belgium,1
+2021-04-28,Canada,2
+2021-04-28,India,1
+2021-04-28,United Kingdom,3
+2021-04-28,United States,5
+2021-04-28,NA,8
+2021-05-24,Canada,1
+2021-05-24,United Kingdom,2
+2021-05-24,United States,3
+2021-05-24,NA,5
+2021-05-25,Australia,1
+2021-05-25,Canada,1
+2021-05-25,India,2
+2021-05-25,Ireland,1
+2021-05-25,United Kingdom,5
+2021-05-25,United States,7
+2021-05-25,NA,6
+2021-05-26,Australia,1
+2021-05-26,Bhutan,1
+2021-05-26,Canada,2
+2021-05-26,France,1
+2021-05-26,India,4
+2021-05-26,United Kingdom,4
+2021-05-26,United States,7
+2021-05-26,NA,12
+2021-05-27,Antarctica,1
+2021-05-27,Bangladesh,1
+2021-05-27,Greece,1
+2021-05-27,India,2
+2021-05-27,Ireland,1
+2021-05-27,Italy,1
+2021-05-27,United Kingdom,3
+2021-05-27,United States,6
+2021-05-27,NA,10
+2021-05-28,Australia,1
+2021-05-28,India,3
+2021-05-28,Ireland,1
+2021-05-28,Pakistan,2
+2021-05-28,Philippines,1
+2021-05-28,Singapore,1
+2021-05-28,St. Helena,1
+2021-05-28,United Kingdom,5
+2021-05-28,United States,1
+2021-05-28,NA,15
+2021-05-29,Australia,1
+2021-05-29,Bhutan,1
+2021-05-29,Canada,1
+2021-05-29,India,3
+2021-05-29,Ireland,1
+2021-05-29,St. Helena,1
+2021-05-29,United Kingdom,4
+2021-05-29,United States,5
+2021-05-29,NA,13
+2021-05-30,Pakistan,1
+2021-05-30,United Kingdom,3
+2021-05-30,United States,2
+2021-05-30,NA,2
+2021-06-15,India,6
+2021-06-15,United Kingdom,3
+2021-06-15,NA,5
+2021-06-16,Brazil,1
+2021-06-16,India,4
+2021-06-16,Italy,1
+2021-06-16,United Kingdom,3
+2021-06-16,United States,3
+2021-06-16,NA,6
+2021-06-17,Pakistan,1
+2021-06-17,United Kingdom,4
+2021-06-17,United States,2
+2021-06-17,NA,5
+2021-06-18,Canada,1
+2021-06-18,India,1
+2021-06-18,Indonesia,1
+2021-06-18,United Kingdom,1
+2021-06-18,United States,1
+2021-06-18,NA,3
+2021-06-19,Australia,2
+2021-06-19,Canada,3
+2021-06-19,Italy,1
+2021-06-19,United Kingdom,3
+2021-06-19,United States,2
+2021-06-19,NA,7
+2021-06-20,Canada,1
+2021-06-20,India,1
+2021-06-20,St. Helena,1
+2021-06-20,United Kingdom,1
+2021-06-20,NA,2
+2021-06-21,Australia,1
+2021-06-21,India,1
+2021-06-21,United States,1
+2021-06-21,NA,6
+2021-06-22,South Africa,1
+2021-06-22,United Kingdom,3
+2021-06-22,United States,2
+2021-06-22,NA,6
+2021-06-23,Hong Kong SAR China,1
+2021-06-23,India,2
+2021-06-23,Malaysia,1
+2021-06-23,United Kingdom,1
+2021-06-23,United States,1
+2021-06-23,NA,3
+2021-06-24,Canada,1
+2021-06-24,Myanmar (Burma),1
+2021-06-24,United States,1
+2021-06-24,NA,4
+2021-06-30,India,2
+2021-06-30,United Kingdom,2
+2021-06-30,NA,5
+2021-07-01,Canada,2
+2021-07-01,India,1
+2021-07-01,United Kingdom,2
+2021-07-01,United States,5
+2021-07-01,NA,6
+2021-07-02,India,1
+2021-07-02,Spain,1
+2021-07-02,St. Helena,1
+2021-07-02,United Kingdom,2
+2021-07-02,United States,5
+2021-07-02,NA,6
+2021-07-03,Australia,1
+2021-07-03,Colombia,1
+2021-07-03,India,5
+2021-07-03,Japan,1
+2021-07-03,Mexico,1
+2021-07-03,Pakistan,1
+2021-07-03,Saudi Arabia,1
+2021-07-03,Sri Lanka,1
+2021-07-03,Sweden,1
+2021-07-03,United Kingdom,7
+2021-07-03,United States,6
+2021-07-03,NA,11
+2021-07-04,Canada,1
+2021-07-04,Cape Verde,1
+2021-07-04,India,1
+2021-07-04,Japan,1
+2021-07-04,United Kingdom,3
+2021-07-04,United States,3
+2021-07-04,NA,7
+2021-07-05,India,2
+2021-07-05,Singapore,1
+2021-07-05,United Kingdom,4
+2021-07-05,United States,2
+2021-07-05,NA,9
+2021-07-06,Canada,1
+2021-07-06,United Kingdom,4
+2021-07-06,United States,11
+2021-07-06,NA,10
+2021-07-09,Colombia,1
+2021-07-09,United Kingdom,4
+2021-07-09,NA,2
+2021-07-10,Australia,2
+2021-07-10,Canada,2
+2021-07-10,India,1
+2021-07-10,Ireland,1
+2021-07-10,United Kingdom,5
+2021-07-10,United States,3
+2021-07-10,NA,10
+2021-07-11,South Africa,1
+2021-07-11,United Kingdom,5
+2021-07-11,United States,1
+2021-07-11,NA,5
+2021-07-12,Pakistan,1
+2021-07-12,South Africa,2
+2021-07-12,United Kingdom,2
+2021-07-12,United States,4
+2021-07-12,NA,4
+2021-07-13,Australia,1
+2021-07-13,Canada,1
+2021-07-13,India,1
+2021-07-13,United Kingdom,1
+2021-07-13,United States,6
+2021-07-13,NA,10
+2021-07-14,Canada,3
+2021-07-14,India,2
+2021-07-14,Uganda,1
+2021-07-14,United Kingdom,2
+2021-07-14,United States,7
+2021-07-14,NA,4
+2021-07-15,United Kingdom,2
+2021-07-15,United States,5
+2021-07-15,NA,2
+2021-07-16,Australia,1
+2021-07-16,India,1
+2021-07-16,Philippines,1
+2021-07-16,United States,5
+2021-07-16,NA,10
+2021-07-17,Australia,1
+2021-07-17,Canada,1
+2021-07-17,India,2
+2021-07-17,St. Helena,1
+2021-07-17,Turkmenistan,1
+2021-07-17,United Kingdom,1
+2021-07-17,United States,8
+2021-07-17,NA,12
+2021-07-18,Afghanistan,1
+2021-07-18,India,1
+2021-07-18,Peru,1
+2021-07-18,Philippines,1
+2021-07-18,United States,10
+2021-07-18,NA,7
+2021-07-19,Canada,1
+2021-07-19,India,3
+2021-07-19,United Kingdom,1
+2021-07-19,United States,4
+2021-07-19,NA,3
+2021-07-20,Australia,2
+2021-07-20,North Korea,1
+2021-07-20,Pakistan,1
+2021-07-20,United Kingdom,1
+2021-07-20,United States,9
+2021-07-20,NA,10
+2021-07-21,Canada,2
+2021-07-21,Iceland,1
+2021-07-21,India,1
+2021-07-21,Ireland,1
+2021-07-21,Spain,1
+2021-07-21,United Kingdom,2
+2021-07-21,United States,9
+2021-07-21,NA,5
+2021-07-22,Australia,1
+2021-07-22,Canada,1
+2021-07-22,Georgia,1
+2021-07-22,India,1
+2021-07-22,Norfolk Island,1
+2021-07-22,United Kingdom,1
+2021-07-22,United States,24
+2021-07-22,NA,10
+2021-07-23,Canada,2
+2021-07-23,France,1
+2021-07-23,Iceland,1
+2021-07-23,India,1
+2021-07-23,St. Helena,1
+2021-07-23,United Kingdom,5
+2021-07-23,United States,15
+2021-07-23,NA,15
+2021-07-24,Canada,1
+2021-07-24,Finland,1
+2021-07-24,Hong Kong SAR China,1
+2021-07-24,Italy,1
+2021-07-24,St. Helena,1
+2021-07-24,United Kingdom,3
+2021-07-24,United States,9
+2021-07-24,NA,13
+2021-07-25,Australia,1
+2021-07-25,Canada,1
+2021-07-25,United Kingdom,4
+2021-07-25,United States,16
+2021-07-25,NA,5
+2021-07-26,Canada,1
+2021-07-26,United States,4
+2021-07-26,NA,8
+2021-07-27,Canada,1
+2021-07-27,Ghana,1
+2021-07-27,Hong Kong SAR China,1
+2021-07-27,India,2
+2021-07-27,Ireland,1
+2021-07-27,Spain,1
+2021-07-27,United Kingdom,3
+2021-07-27,United States,23
+2021-07-27,NA,12
+2021-07-28,Botswana,1
+2021-07-28,Canada,1
+2021-07-28,France,1
+2021-07-28,India,4
+2021-07-28,Italy,1
+2021-07-28,Mexico,1
+2021-07-28,Somalia,1
+2021-07-28,United Kingdom,2
+2021-07-28,United States,10
+2021-07-28,NA,10
+2021-07-29,United Kingdom,1
+2021-07-29,United States,10
+2021-07-29,NA,13
+2021-07-30,Canada,1
+2021-07-30,Fiji,1
+2021-07-30,India,2
+2021-07-30,Mexico,1
+2021-07-30,Singapore,1
+2021-07-30,Somalia,1
+2021-07-30,South Africa,2
+2021-07-30,United Kingdom,5
+2021-07-30,United States,21
+2021-07-30,NA,15
+2021-07-31,Algeria,1
+2021-07-31,Australia,1
+2021-07-31,Georgia,1
+2021-07-31,Italy,1
+2021-07-31,United Kingdom,5
+2021-07-31,United States,11
+2021-07-31,NA,9
+2021-08-02,Australia,2
+2021-08-02,Canada,1
+2021-08-02,Kenya,1
+2021-08-02,United Kingdom,2
+2021-08-02,United States,4
+2021-08-02,NA,1
+2021-08-03,Australia,2
+2021-08-03,Canada,1
+2021-08-03,Colombia,1
+2021-08-03,India,3
+2021-08-03,Jersey,1
+2021-08-03,Sint Maarten,1
+2021-08-03,United Kingdom,1
+2021-08-03,United States,21
+2021-08-03,Zimbabwe,1
+2021-08-03,NA,17
+2021-08-04,Canada,1
+2021-08-04,India,2
+2021-08-04,Japan,1
+2021-08-04,Pakistan,1
+2021-08-04,St. Helena,1
+2021-08-04,United Kingdom,7
+2021-08-04,United States,17
+2021-08-04,NA,17
+2021-08-05,Australia,2
+2021-08-05,Canada,1
+2021-08-05,India,1
+2021-08-05,Nigeria,1
+2021-08-05,United Kingdom,10
+2021-08-05,United States,17
+2021-08-05,NA,23
+2021-08-06,Canada,3
+2021-08-06,Czechia,2
+2021-08-06,Japan,1
+2021-08-06,Nigeria,2
+2021-08-06,United States,13
+2021-08-06,NA,15
+2021-08-07,Canada,1
+2021-08-07,Iceland,1
+2021-08-07,Japan,1
+2021-08-07,Pakistan,1
+2021-08-07,St. Helena,1
+2021-08-07,United Kingdom,3
+2021-08-07,United States,14
+2021-08-07,NA,5
+2021-08-08,Germany,1
+2021-08-08,Japan,3
+2021-08-08,Switzerland,1
+2021-08-08,United Kingdom,2
+2021-08-08,United States,10
+2021-08-08,Zambia,1
+2021-08-08,NA,5
+2021-08-09,Australia,1
+2021-08-09,India,2
+2021-08-09,Japan,4
+2021-08-09,New Zealand,1
+2021-08-09,Norway,1
+2021-08-09,United Kingdom,3
+2021-08-09,United States,20
+2021-08-09,NA,18
+2021-08-10,Canada,1
+2021-08-10,Philippines,1
+2021-08-10,United Kingdom,3
+2021-08-10,United States,9
+2021-08-10,NA,11
+2021-08-14,Canada,1
+2021-08-14,India,2
+2021-08-14,Israel,1
+2021-08-14,Spain,1
+2021-08-14,United Kingdom,1
+2021-08-14,United States,11
+2021-08-14,NA,9
+2021-08-15,Trinidad & Tobago,1
+2021-08-15,United States,14
+2021-08-15,NA,17
+2021-08-16,Canada,2
+2021-08-16,Ethiopia,1
+2021-08-16,India,1
+2021-08-16,St. Helena,1
+2021-08-16,United Kingdom,1
+2021-08-16,United States,10
+2021-08-16,NA,8
+2021-08-17,India,1
+2021-08-17,Italy,1
+2021-08-17,Saudi Arabia,1
+2021-08-17,United Kingdom,2
+2021-08-17,United States,10
+2021-08-17,NA,4
+2021-08-18,Australia,1
+2021-08-18,St. Helena,1
+2021-08-18,United Kingdom,1
+2021-08-18,United States,11
+2021-08-18,NA,11
+2021-08-19,Georgia,1
+2021-08-19,Iceland,1
+2021-08-19,India,1
+2021-08-19,Japan,1
+2021-08-19,Saudi Arabia,1
+2021-08-19,South Africa,1
+2021-08-19,United Kingdom,1
+2021-08-19,United States,7
+2021-08-19,NA,6
+2021-08-20,India,1
+2021-08-20,New Zealand,1
+2021-08-20,Peru,1
+2021-08-20,South Africa,1
+2021-08-20,United Kingdom,3
+2021-08-20,United States,10
+2021-08-20,NA,21
+2021-08-21,Canada,2
+2021-08-21,Colombia,1
+2021-08-21,Georgia,1
+2021-08-21,India,1
+2021-08-21,Italy,1
+2021-08-21,Switzerland,1
+2021-08-21,United States,8
+2021-08-21,NA,5
+2021-08-22,Australia,2
+2021-08-22,Canada,1
+2021-08-22,Kenya,1
+2021-08-22,United Kingdom,1
+2021-08-22,United States,8
+2021-08-22,NA,11
+2021-08-23,Australia,1
+2021-08-23,Canada,1
+2021-08-23,India,1
+2021-08-23,South Africa,1
+2021-08-23,United Kingdom,2
+2021-08-23,United States,6
+2021-08-23,NA,3
+2021-08-24,India,1
+2021-08-24,Japan,1
+2021-08-24,United Kingdom,4
+2021-08-24,United States,6
+2021-08-24,NA,5
+2021-08-25,Colombia,1
+2021-08-25,Pakistan,1
+2021-08-25,United States,7
+2021-08-25,NA,8
+2021-08-26,Canada,1
+2021-08-26,India,1
+2021-08-26,Pakistan,1
+2021-08-26,Peru,1
+2021-08-26,South Africa,1
+2021-08-26,St. Helena,1
+2021-08-26,United Kingdom,1
+2021-08-26,United States,9
+2021-08-26,NA,8
+2021-08-27,India,1
+2021-08-27,Ireland,1
+2021-08-27,United Kingdom,1
+2021-08-27,United States,5
+2021-08-27,NA,6
+2021-09-07,United Kingdom,1
+2021-09-07,United States,1
+2021-09-08,Australia,1
+2021-09-08,Canada,1
+2021-09-08,India,2
+2021-09-08,United States,8
+2021-09-08,NA,7
+2021-09-09,United States,3
+2021-09-09,NA,1
+2021-10-15,United Kingdom,2
+2021-10-15,United States,5
+2021-10-15,NA,2
+2021-10-16,Canada,1
+2021-10-16,Iceland,1
+2021-10-16,United States,5
+2021-10-16,NA,2
+2021-10-17,Bahrain,1
+2021-10-17,Canada,1
+2021-10-17,Japan,1
+2021-10-17,Philippines,1
+2021-10-17,United States,2
+2021-10-17,NA,3
+2021-10-18,United Kingdom,1
+2021-10-18,United States,4
+2021-10-18,NA,2
+2021-10-19,Australia,2
+2021-10-19,Canada,1
+2021-10-19,India,1
+2021-10-19,Netherlands,1
+2021-10-19,United States,9
+2021-10-19,NA,6
+2021-10-20,Australia,1
+2021-10-20,Canada,1
+2021-10-20,India,1
+2021-10-20,Indonesia,1
+2021-10-20,Uganda,1
+2021-10-20,United Kingdom,1
+2021-10-20,United States,4
+2021-10-20,NA,9
+2021-10-21,Australia,1
+2021-10-21,Canada,2
+2021-10-21,India,4
+2021-10-21,Indonesia,1
+2021-10-21,Japan,1
+2021-10-21,Niger,1
+2021-10-21,United Kingdom,2
+2021-10-21,United States,8
+2021-10-21,NA,6
+2021-10-22,India,1
+2021-10-22,United Kingdom,3
+2021-10-22,United States,5
+2021-10-22,NA,5
+2021-10-23,India,1
+2021-10-23,United Kingdom,1
+2021-10-23,United States,4
+2021-10-23,NA,3
+2021-10-24,United Kingdom,1
+2021-10-24,United States,6
+2021-10-24,NA,2
+2021-10-25,Australia,1
+2021-10-25,India,1
+2021-10-25,Malawi,1
+2021-10-25,Spain,1
+2021-10-25,United Kingdom,1
+2021-10-25,United States,4
+2021-10-25,NA,4
+2021-10-26,Australia,1
+2021-10-26,Kenya,1
+2021-10-26,United Kingdom,3
+2021-10-26,United States,5
+2021-10-26,NA,1
+2021-10-27,India,1
+2021-10-27,Kenya,1
+2021-10-27,Norfolk Island,1
+2021-10-27,United Kingdom,6
+2021-10-27,United States,7
+2021-10-27,NA,5
+2021-10-28,United Kingdom,2
+2021-10-28,United States,1
+2021-10-28,NA,3
+2021-10-29,India,3
+2021-10-29,Switzerland,1
+2021-10-29,United Kingdom,5
+2021-10-29,United States,2
+2021-10-30,Canada,1
+2021-10-30,United Kingdom,5
+2021-10-30,United States,1
+2021-10-30,NA,4
+2021-10-31,Australia,1
+2021-10-31,Indonesia,1
+2021-10-31,United Kingdom,2
+2021-10-31,United States,1
+2021-10-31,NA,2
+2021-11-01,India,1
+2021-11-01,United Kingdom,1
+2021-11-01,United States,1
+2021-11-01,NA,2
+2021-11-02,Australia,1
+2021-11-02,Canada,1
+2021-11-02,United States,4
+2021-11-02,NA,3
+2021-11-03,Hungary,1
+2021-11-03,United States,3
+2021-11-03,NA,6
+2021-11-04,Iceland,1
+2021-11-04,India,1
+2021-11-04,United Kingdom,1
+2021-11-04,United States,4
+2021-11-04,NA,3
+2021-11-05,Australia,1
+2021-11-05,India,1
+2021-11-05,Ireland,1
+2021-11-05,South Africa,1
+2021-11-05,Spain,1
+2021-11-05,Tuscany,1
+2021-11-05,United Kingdom,7
+2021-11-05,United States,5
+2021-11-05,NA,6
+2021-11-06,Colombia,1
+2021-11-06,India,1
+2021-11-06,United States,3
+2021-11-06,NA,6
+2021-11-07,Canada,1
+2021-11-07,United Kingdom,1
+2021-11-07,United States,2
+2021-11-07,NA,4
+2021-11-08,Jersey,1
+2021-11-08,United Kingdom,3
+2021-11-08,United States,2
+2021-11-08,NA,2
+2021-11-09,United Kingdom,2
+2021-11-09,United States,4
+2021-11-09,NA,1
+2021-11-10,Australia,2
+2021-11-10,Canada,1
+2021-11-10,India,1
+2021-11-10,Pakistan,1
+2021-11-10,United Kingdom,2
+2021-11-10,United States,6
+2021-11-10,NA,6
+2021-11-11,Germany,1
+2021-11-11,India,2
+2021-11-11,United Kingdom,2
+2021-11-11,United States,2
+2021-11-11,NA,6
+2021-11-12,India,2
+2021-11-12,Philippines,1
+2021-11-12,United Kingdom,5
+2021-11-12,United States,2
+2021-11-12,NA,8
+2021-11-13,Ireland,1
+2021-11-13,United States,6
+2021-11-13,NA,4
+2021-11-14,Philippines,1
+2021-11-14,United Kingdom,2
+2021-11-14,United States,3
+2021-11-14,NA,2
+2021-11-15,India,1
+2021-11-15,Pakistan,1
+2021-11-15,St. Helena,1
+2021-11-15,Uganda,1
+2021-11-15,United Kingdom,1
+2021-11-15,United States,6
+2021-11-15,NA,9
+2021-11-16,Canada,1
+2021-11-16,India,2
+2021-11-16,Poland,1
+2021-11-16,Switzerland,1
+2021-11-16,United Kingdom,2
+2021-11-16,United States,5
+2021-11-16,NA,11
+2021-11-17,Australia,1
+2021-11-17,Italy,1
+2021-11-17,United Kingdom,5
+2021-11-17,United States,9
+2021-11-17,NA,14
+2021-11-18,France,1
+2021-11-18,Ireland,1
+2021-11-18,United Kingdom,2
+2021-11-18,United States,6
+2021-11-18,NA,3
+2021-11-19,Australia,1
+2021-11-19,France,1
+2021-11-19,United Kingdom,4
+2021-11-19,United States,5
+2021-11-19,NA,3
+2021-11-20,United Kingdom,3
+2021-11-20,United States,5
+2021-11-20,NA,5
+2021-11-21,Georgia,1
+2021-11-21,Germany,1
+2021-11-21,Russia,1
+2021-11-21,United Kingdom,5
+2021-11-21,United States,2
+2021-11-21,NA,7
+2021-11-22,Australia,1
+2021-11-22,Canada,1
+2021-11-22,United Kingdom,5
+2021-11-22,United States,4
+2021-11-22,NA,4
+2021-11-23,India,1
+2021-11-23,Turkey,1
+2021-11-23,United Kingdom,4
+2021-11-23,United States,1
+2021-11-23,NA,2
+2021-11-24,Colombia,1
+2021-11-24,India,1
+2021-11-24,United Kingdom,5
+2021-11-24,United States,1
+2021-11-24,NA,2
+2021-11-25,St. Helena,1
+2021-11-25,Switzerland,1
+2021-11-25,United Kingdom,1
+2021-11-25,United States,2
+2021-11-25,NA,4
+2021-11-26,India,1
+2021-11-26,Lebanon,1
+2021-11-26,United Kingdom,4
+2021-11-26,United States,2
+2021-11-26,NA,1
+2021-11-27,United Kingdom,1
+2021-11-27,NA,1
+2021-12-04,Australia,1
+2021-12-04,India,2
+2021-12-04,Pakistan,1
+2021-12-04,United Kingdom,3
+2021-12-04,United States,3
+2021-12-04,NA,10
+2021-12-05,Australia,5
+2021-12-05,France,1
+2021-12-05,India,3
+2021-12-05,Netherlands,2
+2021-12-05,United Kingdom,6
+2021-12-05,United States,15
+2021-12-05,NA,8
+2021-12-06,Australia,1
+2021-12-06,Canada,2
+2021-12-06,Germany,1
+2021-12-06,United Kingdom,1
+2021-12-06,United States,5
+2021-12-06,NA,12
+2021-12-07,France,1
+2021-12-07,United Kingdom,2
+2021-12-07,United States,5
+2021-12-07,NA,12
+2021-12-08,India,1
+2021-12-08,Nepal,1
+2021-12-08,South Africa,1
+2021-12-08,United States,6
+2021-12-08,NA,6
+2021-12-09,South Africa,1
+2021-12-09,United Kingdom,1
+2021-12-09,United States,12
+2021-12-09,NA,4
+2021-12-10,United Kingdom,2
+2021-12-10,United States,3
+2021-12-10,NA,1
+2021-12-11,India,1
+2021-12-11,United Kingdom,3
+2021-12-11,United States,3
+2021-12-11,NA,2
+2021-12-12,Iceland,1
+2021-12-12,India,1
+2021-12-12,United Kingdom,1
+2021-12-12,United States,5
+2021-12-12,NA,5
+2021-12-13,India,1
+2021-12-13,United Kingdom,2
+2021-12-13,United States,2
+2021-12-13,NA,2
+2021-12-14,United Kingdom,2
+2021-12-14,United States,3
+2021-12-14,NA,5
+2021-12-15,South Africa,1
+2021-12-15,Suriname,1
+2021-12-15,United States,4
+2021-12-15,NA,3
+2021-12-16,Canada,1
+2021-12-16,Ghana,1
+2021-12-16,India,1
+2021-12-16,United Kingdom,1
+2021-12-16,United States,5
+2021-12-16,NA,5
+2021-12-17,India,1
+2021-12-17,Philippines,1
+2021-12-17,St. Vincent & Grenadines,1
+2021-12-17,United Kingdom,2
+2021-12-17,United States,4
+2021-12-17,NA,2
+2021-12-18,United States,5
+2021-12-18,NA,2
+2021-12-23,United Kingdom,1
+2021-12-23,United States,6
+2021-12-23,NA,19
+2021-12-24,Spain,2
+2021-12-24,United Kingdom,1
+2021-12-24,United States,4
+2021-12-24,NA,3
+2021-12-25,India,1
+2021-12-25,NA,5
+2021-12-26,Greece,1
+2021-12-26,India,1
+2021-12-26,Pakistan,1
+2021-12-26,United States,2
+2021-12-26,NA,1
+2021-12-27,Colombia,1
+2021-12-27,Pakistan,1
+2021-12-27,United States,2
+2021-12-27,NA,3
+2021-12-28,Canada,2
+2021-12-28,United States,3
+2021-12-28,NA,4
+2021-12-29,Australia,2
+2021-12-29,United Kingdom,1
+2021-12-29,United States,3
+2021-12-29,NA,2
+2021-12-30,India,1
+2021-12-30,United States,1
+2021-12-30,NA,3
+2021-12-31,United Kingdom,3
+2021-12-31,United States,3
+2021-12-31,NA,3
+2022-01-07,United Kingdom,1
+2022-01-07,United States,3
+2022-01-07,NA,21
+2022-01-08,India,1
+2022-01-08,United States,3
+2022-01-08,NA,24
+2022-01-09,India,1
+2022-01-09,United Kingdom,1
+2022-01-09,United States,4
+2022-01-09,NA,2
+2022-01-10,United Kingdom,4
+2022-01-10,United States,1
+2022-01-10,NA,3
+2022-01-11,Bhutan,1
+2022-01-11,Canada,6
+2022-01-11,China,1
+2022-01-11,India,1
+2022-01-11,United Kingdom,4
+2022-01-11,United States,6
+2022-01-11,NA,17
+2022-01-12,Australia,1
+2022-01-12,Baden,1
+2022-01-12,Canada,4
+2022-01-12,France,1
+2022-01-12,Greece,1
+2022-01-12,India,3
+2022-01-12,Italy,1
+2022-01-12,Pakistan,1
+2022-01-12,United Kingdom,12
+2022-01-12,United States,13
+2022-01-12,NA,31
+2022-01-13,Australia,1
+2022-01-13,Canada,2
+2022-01-13,Cape Verde,1
+2022-01-13,Fiji,1
+2022-01-13,India,3
+2022-01-13,Israel,1
+2022-01-13,Myanmar (Burma),1
+2022-01-13,Philippines,1
+2022-01-13,United Kingdom,3
+2022-01-13,United States,7
+2022-01-13,NA,13
+2022-01-14,Canada,1
+2022-01-14,United States,2
+2022-01-14,NA,1
+2022-01-15,India,2
+2022-01-15,United Kingdom,1
+2022-01-15,NA,13
+2022-01-16,Algeria,1
+2022-01-16,Australia,2
+2022-01-16,India,1
+2022-01-16,South Africa,1
+2022-01-16,United Kingdom,1
+2022-01-16,United States,8
+2022-01-16,NA,5
+2022-01-17,United States,18
+2022-01-17,NA,5
+2022-01-18,Georgia,1
+2022-01-18,Indonesia,1
+2022-01-18,United Kingdom,3
+2022-01-18,United States,2
+2022-01-18,NA,5
+2022-01-19,Indonesia,1
+2022-01-19,United Kingdom,1
+2022-01-19,United States,5
+2022-01-19,NA,4
+2022-01-20,Australia,1
+2022-01-20,United Kingdom,1
+2022-01-20,United States,2
+2022-01-20,NA,5
+2022-01-21,India,3
+2022-01-21,United States,5
+2022-01-21,NA,1
+2022-01-22,NA,5
+2022-01-23,India,1
+2022-01-23,United Kingdom,3
+2022-01-23,United States,1
+2022-01-23,NA,1
+2022-01-24,China,1
+2022-01-24,India,1
+2022-01-24,NA,1
+2022-01-25,United Kingdom,1
+2022-01-25,United States,2
+2022-01-25,NA,3
+2022-01-26,United States,2
+2022-01-26,NA,4
+2022-01-27,South Africa,1
+2022-01-27,United States,1
+2022-01-27,NA,1
+2022-01-28,Georgia,1
+2022-01-28,Singapore,1
+2022-01-28,United Kingdom,2
+2022-01-28,United States,2
+2022-01-28,NA,4
+2022-01-29,Denmark,1
+2022-01-29,Pakistan,1
+2022-01-29,United Kingdom,1
+2022-01-29,NA,3
+2022-01-30,United Kingdom,1
+2022-01-30,United States,2
+2022-01-30,NA,4
+2022-01-31,United Arab Emirates,1
+2022-01-31,United Kingdom,4
+2022-01-31,United States,3
+2022-01-31,NA,7
+2022-02-01,Jersey,1
+2022-02-01,United States,3
+2022-02-01,NA,2
+2022-02-03,Australia,1
+2022-02-03,United States,4
+2022-02-03,NA,3
+2022-02-04,Australia,1
+2022-02-04,United Kingdom,1
+2022-02-04,United States,3
+2022-02-04,NA,3
+2022-02-05,India,1
+2022-02-05,Kenya,1
+2022-02-05,United Kingdom,2
+2022-02-05,United States,8
+2022-02-05,NA,3
+2022-02-06,India,1
+2022-02-06,Pakistan,1
+2022-02-06,United States,1
+2022-02-06,NA,1
+2022-02-07,United States,1
+2022-02-07,NA,7
+2022-02-08,Australia,1
+2022-02-08,Canada,2
+2022-02-08,India,1
+2022-02-08,United Kingdom,1
+2022-02-08,United States,8
+2022-02-08,NA,3
+2022-02-09,India,4
+2022-02-09,United States,5
+2022-02-09,NA,10
+2022-02-10,South Africa,1
+2022-02-12,Canada,1
+2022-02-12,NA,3
+2022-02-13,United Kingdom,1
+2022-02-13,United States,1
+2022-02-13,NA,2
+2022-02-14,India,2
+2022-02-14,United States,1
+2022-02-14,NA,1
+2022-02-15,India,1
+2022-02-15,United Kingdom,1
+2022-02-15,NA,6
+2022-02-16,United States,2
+2022-02-16,NA,3
+2022-02-17,United States,1
+2022-02-18,India,2
+2022-02-18,United States,1
+2022-02-18,NA,1
+2022-02-19,United States,4
+2022-02-19,NA,1
+2022-02-20,NA,1
+2022-02-22,Canada,1
+2022-02-22,United States,1
+2022-02-22,NA,2
+2022-02-23,Russia,1
+2022-02-23,United States,4
+2022-02-23,NA,1
+2022-02-24,Australia,1
+2022-02-24,United Kingdom,2
+2022-02-24,United States,1
+2022-02-25,India,2
+2022-02-25,United Kingdom,1
+2022-02-25,United States,1
+2022-02-25,NA,2
+2022-02-26,Brazil,1
+2022-02-26,United Kingdom,1
+2022-02-26,United States,1
+2022-02-27,Czechia,1
+2022-02-27,Montenegro,1
+2022-02-27,United States,1
+2022-03-04,United Kingdom,1
+2022-03-04,NA,3
+2022-03-05,India,1
+2022-03-05,NA,3
+2022-03-06,Australia,1
+2022-03-06,United States,2
+2022-03-07,Australia,1
+2022-03-07,United Kingdom,1
+2022-03-07,United States,1
+2022-03-08,India,1
+2022-03-08,Niger,1
+2022-03-08,United Kingdom,2
+2022-03-08,United States,3
+2022-03-08,NA,2
+2022-03-09,Canada,1
+2022-03-09,United Kingdom,3
+2022-03-09,United States,3
+2022-03-09,NA,4
+2022-03-10,Canada,1
+2022-03-10,NA,1
+2022-03-11,United States,2
+2022-03-12,India,1
+2022-03-13,United Kingdom,1
+2022-03-13,NA,2
+2022-03-14,Australia,1
+2022-03-14,NA,1
+2022-03-15,Canada,1
+2022-03-15,United Kingdom,1
+2022-03-15,United States,2
+2022-03-15,NA,1
+2022-03-16,United States,1
+2022-03-16,NA,1
+2022-03-17,India,1
+2022-03-17,United States,2
+2022-03-18,India,1
+2022-03-18,NA,2
+2022-03-19,NA,2
+2022-03-20,United Kingdom,1
+2022-03-20,United States,1
+2022-03-21,United Kingdom,1
+2022-03-21,United States,1
+2022-03-21,NA,2
+2022-03-22,Mexico,1
+2022-03-22,United States,1
+2022-03-23,Canada,1
+2022-03-23,India,1
+2022-03-23,United States,2
+2022-03-23,NA,1
+2022-03-24,Benin,1
+2022-03-24,United States,1
+2022-03-24,NA,1
+2022-03-25,United States,3
+2022-03-28,United Kingdom,1
+2022-03-28,United States,2
+2022-03-28,NA,2
+2022-03-29,Australia,2
+2022-03-29,United Kingdom,1
+2022-03-29,United States,1
+2022-03-29,NA,1
+2022-03-30,India,2
+2022-03-30,NA,3
+2022-03-31,Germany,1
+2022-03-31,United Kingdom,1
+2022-03-31,United States,1
+2022-04-01,Canada,1
+2022-04-01,United States,2
+2022-04-01,NA,5
+2022-04-02,Sweden,1
+2022-04-02,United States,1
+2022-04-03,NA,1
+2022-04-04,France,1
+2022-04-04,NA,2
+2022-04-05,United States,2
+2022-04-05,NA,3
+2022-04-06,United States,1
+2022-04-06,NA,1
+2022-04-07,Canada,1
+2022-04-07,United States,1
+2022-04-08,United States,3
+2022-04-08,NA,1
+2022-04-10,India,1
+2022-04-10,NA,2
+2022-04-11,United Kingdom,2
+2022-04-11,United States,3
+2022-04-12,Hong Kong SAR China,1
+2022-04-12,United States,3
+2022-04-12,NA,1
+2022-04-13,Canada,1
+2022-04-13,India,1
+2022-04-13,United Kingdom,1
+2022-04-15,Australia,1
+2022-04-17,Canada,1
+2022-04-17,NA,1
+2022-04-18,NA,1
+2022-04-19,Canada,1
+2022-04-19,United States,3
+2022-04-20,Australia,1
+2022-04-21,India,1
+2022-04-21,United States,1
+2022-04-21,NA,2
+2022-04-22,United States,2
+2022-04-23,India,1
+2022-04-24,United States,1
+2022-04-25,NA,1
+2022-04-26,United States,4
+2022-04-26,NA,3
+2022-04-27,United States,2
+2022-04-27,NA,3
+2022-04-28,United Kingdom,1
+2022-04-28,United States,1
+2022-04-28,NA,3
+2022-04-29,India,1
+2022-04-29,United States,3
+2022-04-30,India,2
+2022-04-30,NA,1
+2022-05-01,India,1
+2022-05-07,United States,1
+2022-05-07,NA,1
+2022-05-08,Iceland,1
+2022-05-08,United States,1
+2022-05-08,NA,2
+2022-05-09,United Kingdom,1
+2022-05-09,United States,1
+2022-05-09,NA,3
+2022-05-10,United States,2
+2022-05-10,NA,5
+2022-05-11,Australia,1
+2022-05-11,India,1
+2022-05-11,United States,1
+2022-05-11,NA,1
+2022-05-12,NA,1
+2022-05-13,Australia,1
+2022-05-13,United States,2
+2022-05-13,NA,3
+2022-05-14,United States,5
+2022-05-14,NA,3
+2022-05-20,United States,1
+2022-05-21,Chad,1
+2022-05-21,Kenya,1
+2022-05-21,United States,4
+2022-05-21,NA,1
+2022-05-22,India,1
+2022-05-22,United States,1
+2022-05-23,Germany,1
+2022-05-23,Kenya,1
+2022-05-23,United Kingdom,1
+2022-05-23,United States,2
+2022-05-23,NA,1
+2022-05-24,Kenya,1
+2022-05-24,NA,2
+2022-05-25,United States,2
+2022-05-25,NA,1
+2022-05-26,Germany,1
+2022-05-28,India,1
+2022-05-28,United States,1
+2022-05-29,India,1
+2022-05-30,NA,1
+2022-05-31,United States,2
+2022-06-01,United States,1
+2022-06-02,United States,2
+2022-06-02,Zambia,1
+2022-06-02,NA,1
+2022-06-03,Australia,1
+2022-06-03,United Kingdom,1
+2022-06-03,United States,6
+2022-06-03,NA,1
+2022-06-04,India,1
+2022-06-04,United States,1
+2022-06-04,NA,1
+2022-06-05,United States,1
+2022-06-08,Iceland,1
+2022-06-08,United Kingdom,1
+2022-06-08,United States,1
+2022-06-08,NA,3
+2022-06-09,Australia,1
+2022-06-09,South Africa,2
+2022-06-09,United Kingdom,1
+2022-06-09,United States,2
+2022-06-09,NA,1
+2022-06-10,Jersey,1
+2022-06-10,United Kingdom,1
+2022-06-10,United States,1
+2022-06-10,NA,1
+2022-06-11,India,1
+2022-06-11,United Kingdom,1
+2022-06-11,United States,2
+2022-06-11,NA,4
+2022-06-12,United States,1
+2022-06-12,NA,2
+2022-06-13,Australia,1
+2022-06-13,Canada,1
+2022-06-13,NA,3
+2022-06-14,United States,3
+2022-06-14,NA,1
+2022-06-15,Hong Kong SAR China,1
+2022-06-15,Pakistan,1
+2022-06-15,United Kingdom,1
+2022-06-15,NA,1
+2022-06-16,United States,3
+2022-06-16,NA,3
+2022-07-03,NA,2
+2022-07-04,Canada,1
+2022-07-04,United Kingdom,1
+2022-07-04,NA,1
+2022-07-05,NA,1
+2022-07-06,Iceland,1
+2022-07-06,United Kingdom,1
+2022-07-06,NA,2
+2022-07-07,Canada,2
+2022-07-07,United Kingdom,1
+2022-07-07,United States,1
+2022-07-07,NA,2
+2022-07-08,Australia,1
+2022-07-08,India,1
+2022-07-08,United States,1
+2022-07-08,NA,3
+2022-07-09,United Kingdom,1
+2022-07-09,NA,2
+2022-07-10,Australia,1
+2022-07-10,Italy,1
+2022-07-10,NA,1
+2022-07-11,United States,3
+2022-07-11,NA,1
+2022-07-12,Canada,1
+2022-07-12,Hong Kong SAR China,1
+2022-07-13,United Kingdom,3
+2022-07-13,United States,3
+2022-07-14,United States,2
+2022-07-14,NA,3
+2022-07-15,Canada,1
+2022-07-15,Czechia,1
+2022-07-15,NA,1
+2022-07-16,United Kingdom,1
+2022-07-16,United States,2
+2022-07-16,NA,3
+2022-07-17,Australia,1
+2022-07-17,Greece,1
+2022-07-17,Kenya,1
+2022-07-17,United States,2
+2022-07-18,Australia,1
+2022-07-18,United Kingdom,1
+2022-08-07,NA,1
+2022-08-08,Hong Kong SAR China,1
+2022-08-08,United States,1
+2022-08-09,Italy,1
+2022-08-09,NA,2
+2022-08-10,United States,1
+2022-08-11,India,1
+2022-08-11,United States,3
+2022-08-11,NA,1
+2022-08-12,Australia,1
+2022-08-12,United States,1
+2022-08-12,NA,1
+2022-08-13,Canada,1
+2022-08-13,Japan,2
+2022-08-13,United Kingdom,1
+2022-08-13,NA,4
+2022-08-14,Nepal,1
+2022-08-14,NA,3
+2022-08-15,NA,1
+2022-08-16,United Kingdom,1
+2022-08-16,NA,2
+2022-09-06,Finland,1
+2022-09-07,United States,1
+2022-09-07,NA,2
+2022-09-08,United States,1
+2022-09-08,NA,2
+2022-09-09,Australia,1
+2022-09-09,India,1
+2022-09-09,United Kingdom,1
+2022-09-09,United States,2
+2022-09-09,NA,6
+2022-09-10,NA,3
+2022-09-11,United Kingdom,1
+2022-09-11,NA,5
+2022-09-12,United States,1
+2022-09-13,NA,2
+2022-09-14,United Kingdom,1
+2022-09-14,United States,2
+2022-09-14,NA,2
+2022-09-15,United States,1
+2022-09-15,NA,1
