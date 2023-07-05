@@ -3,18 +3,23 @@
 
 from typing import Tuple, Dict, Any
 from jaxtyping import Array
-from flax import linen as nn
 from flax.training import train_state
 import jax
 import jax.numpy as jnp
 import optax
+from .rnn import Seq2seq
 
-def get_train_state(rng: Any, model: nn.Module, n_features: int) -> train_state.TrainState:
+def get_train_state(rng: Any) -> train_state.TrainState:
     """Returns a train state."""
+    model = Seq2seq(
+        teacher_force = True,
+        hidden_size = 10,
+        eos_id = -1
+    )
     params = model.init(
         rng,
-        jnp.ones((1, n_features, 1)),
-        jnp.ones((1, n_features, 1))
+        jnp.ones((1, 100, 10)),
+        jnp.ones((1, 100, 1))
     )
     tx = optax.adam(1e-2)
     state = train_state.TrainState.create(
