@@ -4,6 +4,7 @@ import ast
 from .embed import count_embeddings, model_topics
 from .batch import windowing
 from .train import train
+from .forecasts import make_forecasts
 from jax import random
 
 parser = argparse.ArgumentParser(
@@ -27,13 +28,11 @@ parser.add_argument(
 )
 
 def train_model(X, y, lag):
+    #TODO: cycle the key
     key = random.PRNGKey(0)
-    X, y = windowing(X, y, lag)
-    state = train(key, X, y)
+    X, y_input, y_output = windowing(X, y, lag)
+    state = train(key, X, y_input, y_output, batch_size=-1)
     return state
-
-def make_forecasts(model, x, y):
-    pass
 
 def load_indicator(path):
     indicator = pd.read_csv(path)
@@ -109,7 +108,7 @@ if __name__ == '__main__':
 
     forecasts = list()
     for X_train, y_train, X_test, y_test in dataset:
-        model = train_model(X_train, y_train, args.lag)
-        forecasts.append(make_forecasts(model, X_test, y_test))
+        state = train_model(X_train, y_train, args.lag)
+        forecasts.append(make_forecasts(state, X_test, y_test))
 
     pd.concat(forecasts).to_csv(args.output)

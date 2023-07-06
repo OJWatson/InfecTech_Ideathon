@@ -10,13 +10,16 @@ from jax import random
 import optax
 from .rnn import Seq2seq
 
-def get_train_state(rng: Any, n_features: int, lag: int) -> train_state.TrainState:
-    """Returns a train state."""
-    model = Seq2seq(
-        teacher_force = True,
+def get_model(teacher_force = False):
+    return Seq2seq(
+        teacher_force = teacher_force,
         hidden_size = 128,
         eos_id = -1
     )
+
+def get_train_state(rng: Any, n_features: int, lag: int) -> train_state.TrainState:
+    """Returns a train state."""
+    model = get_model(teacher_force=True 
     params = model.init(
         rng,
         jnp.ones((1, 100, n_features)),
@@ -74,7 +77,7 @@ def train_step(
 def train(
     key: Any,
     X: Array,
-    y_train: Array,
+    y_input: Array,
     y_test: Array,
     epochs: int = 100,
     batch_size = 100
@@ -83,7 +86,7 @@ def train(
     lag = y_test.shape[1]
 
     # Create input sequences 
-    X_input = jnp.concatenate([X, y_train], axis=-1)
+    X_input = jnp.concatenate([X, y_input], axis=-1)
 
     # Create output sequences 
     y_input = jnp.concatenate([y_train[:,-1:,:], y_test], axis=1)
@@ -91,9 +94,14 @@ def train(
     y_input = jnp.concatenate([y_input, y_std], axis=-1)
 
     # Batch the sequences
-    X_batched = jnp.split(X_input, batch_size)
-    y_input_batched = jnp.split(y_input, batch_size)
-    y_test_batched = jnp.split(y_test, batch_size)
+    if batch_size == -1:
+        X_batched = [X_input]
+        y_input_batched = [y_input]
+        y_test_batched = [y_test]
+    else:
+        X_batched = jnp.split(X_input, batch_size)
+        y_input_batched = jnp.split(y_input, batch_size)
+        y_test_batched = jnp.split(y_test, batch_size)
 
     # Ceate the train state
     key, key_i = random.split(key)

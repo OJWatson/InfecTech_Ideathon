@@ -69,7 +69,7 @@ class Seq2seq(nn.Module):
           decoder_inputs: [batch_size, max_output_length, vocab_size].
             padded batch of expected decoded sequences for teacher forcing.
             When sampling (i.e., `teacher_force = False`), only the first token is
-            input into the decoder (which is the token "="), and samples are used
+            input and samples are used
             for the following inputs. The second dimension of this tensor determines
             how many steps will be decoded, regardless of the value of
             `teacher_force`.
