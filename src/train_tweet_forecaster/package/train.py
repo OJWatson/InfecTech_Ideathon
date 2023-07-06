@@ -9,7 +9,7 @@ import jax.numpy as jnp
 import optax
 from .rnn import Seq2seq
 
-def get_train_state(rng: Any) -> train_state.TrainState:
+def get_train_state(rng: Any, lag: int) -> train_state.TrainState:
     """Returns a train state."""
     model = Seq2seq(
         teacher_force = True,
@@ -19,7 +19,7 @@ def get_train_state(rng: Any) -> train_state.TrainState:
     params = model.init(
         rng,
         jnp.ones((1, 100, 10)),
-        jnp.ones((1, 100, 1))
+        jnp.ones((1, lag + 1, 2))
     )
     tx = optax.adam(1e-2)
     state = train_state.TrainState.create(
@@ -71,7 +71,8 @@ def train_step(
     return state, metrics
 
 def train(key: Any, X: Array, y: Array, epochs: int = 100):
-    state = get_train_state(key)
+    lag = y.shape[1]
+    state = get_train_state(key, lag)
     for step in range(epochs):
         #TODO: minibatching
         state, metrics = train_step(state, X, y)

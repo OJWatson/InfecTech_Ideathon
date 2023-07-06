@@ -18,7 +18,6 @@ class DecoderLSTMCell(nn.RNNCellBase):
     teacher_force: See docstring on Seq2seq module.
     feature_size: Feature size of the output sequence
     """
-    features: int
     teacher_force: bool
     feature_size: int
 
@@ -27,27 +26,27 @@ class DecoderLSTMCell(nn.RNNCellBase):
           self,
           carry: Tuple[LSTMCarry, Array],
           x: Array
-          ) -> Tuple[LSTMCarry, Array]:
+          ) -> Tuple[Tuple[LSTMCarry, Array], Array]:
         """Applies the DecoderLSTM model."""
         lstm_state, last_prediction = carry
         if not self.teacher_force:
             x = last_prediction
-        lstm_state, y = nn.LSTMCell(self.features)(lstm_state, x)
-        predictions = nn.Dense(features=self.feature_size)(y)
-        return lstm_state, predictions
+        lstm_state, y = nn.LSTMCell()(lstm_state, x)
+        prediction = nn.Dense(features=self.feature_size)(y)
+        carry = (lstm_state, prediction)
+        return carry, prediction
 
     @property
     def num_feature_axes(self) -> int:
-        return 1
-
+        return 2
 
 class Seq2seq(nn.Module):
     """Sequence-to-sequence class using encoder/decoder architecture.
 
     Attributes:
     teacher_force: whether to use `decoder_inputs` as input to the decoder at
-      every step. If False, only the first input (i.e., the "=" token) is used,
-      followed by samples taken from the previous output logits.
+      every step. If False, only the first input i.e. the previous indicator
+      value.
     hidden_size: int, the number of hidden dimensions in the encoder and decoder
       LSTMs.
     eos_id: float, the value for the end of the input
@@ -57,8 +56,11 @@ class Seq2seq(nn.Module):
     eos_id: float
 
     @nn.compact
-    def __call__(self, encoder_inputs: Array,
-               decoder_inputs: Array) -> Tuple[Array, Array]:
+    def __call__(
+        self,
+        encoder_inputs: Array,
+        decoder_inputs: Array
+        ) -> Tuple[Array, Array]:
         """Applies the seq2seq model.
 
         Args:
@@ -78,25 +80,22 @@ class Seq2seq(nn.Module):
         """
         # Encode inputs.
         encoder = nn.RNN(
-            nn.LSTMCell(self.hidden_size),
+            nn.LSTMCell(),
             self.hidden_size,
-            return_carry=True,
-            name='encoder'
+            return_carry=True
         )
         decoder = nn.RNN(
             DecoderLSTMCell(
-                decoder_inputs.shape[-1],
                 self.teacher_force,
-                2
+                decoder_inputs.shape[-1]
             ),
-            decoder_inputs.shape[-1],
-            name='decoder'
+            decoder_inputs.shape[-1]
         )
 
         seq_lengths = self.get_seq_lengths(encoder_inputs)
 
-        encoder_state, _ = encoder(encoder_inputs, seq_lengths=seq_lengths)
-        _, predictions = decoder(
+        encoder_state, y = encoder(encoder_inputs, seq_lengths=seq_lengths)
+        predictions = decoder(
             decoder_inputs[:, :-1],
             initial_carry=(encoder_state, decoder_inputs[:, 0])
         )
@@ -105,4 +104,4 @@ class Seq2seq(nn.Module):
 
     def get_seq_lengths(self, inputs: Array) -> Array:
         """Get segmentation mask for inputs."""
-        return jnp.argmax(inputs == self.eos_id, axis=-1)
+        return jnp.argmax(inputs[:, :, 0] == self.eos_id, axis=-1)
