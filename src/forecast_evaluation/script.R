@@ -6,12 +6,13 @@ library(tidyverse)
 fc_ets <- read_csv("time_series_analysis_forecast/outputs/output_fc_ets.csv")
 fc_arima <- read_csv("time_series_analysis_forecast/outputs/output_fc_arima.csv")
 fc_arima_tweet <- read_csv("time_series_analysis_forecast/outputs/output_fc_arima_tweet.csv")
+fc_ensemble <- read_csv("time_series_analysis_forecast/outputs/output_fc_ensemble.csv")
 
 ## Read data
 data <- read_csv("data_covid_cases/outputs/cases_GB.csv")
 
 ## Combine forecasts and data for scoring
-fc_all <- bind_rows(fc_arima,fc_ets,fc_arima_tweet) %>% 
+fc_all <- bind_rows(fc_arima,fc_ets,fc_arima_tweet,fc_ensemble) %>% 
   pivot_longer(-c(model,date,ci_level,forecast_date),
                names_to="quantile_old",values_to="prediction") %>% 
   mutate(quantile=ifelse(quantile_old=="mean",0.5,

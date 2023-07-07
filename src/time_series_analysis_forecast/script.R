@@ -5,6 +5,7 @@ library(urca)
 library(dplyr)
 library(tidyverse)
 library(cowplot)
+library(distributional)
 source("time_series_analysis_forecast/support.R")
 
 ## The output of this script is .csv files of forecast and
@@ -41,55 +42,83 @@ forecast_date <- sort(c(seq(ymd(paste0(year(start_date),"-03-01")),ymd(max(data$
 
 ## Forecast using ETS
 fc_ets_list <- list()
+fit_ets_list <- list()
 for (i in seq_along(forecast_date)){
   training_end_date <- forecast_date[i] - 1
-  fc_ets_list[[i]] <- time_series_forecast(data = data,
-                                           method = 'ets',
-                                           date_start = start_date,
-                                           date_end = training_end_date,
-                                           len = "14 days",ci=95) %>% 
-    mutate(forecast_date=forecast_date[i])
+  fc_ets_out <- time_series_forecast(data = data,
+                                     method = 'ets',
+                                     date_start = start_date,
+                                     date_end = training_end_date,
+                                     len = "14 days",ci=95)
+  fc_ets_list[[i]] <- fc_ets_out$fc %>% mutate(forecast_date=forecast_date[i])
+  fit_ets_list[[i]] <- fc_ets_out$fit
 }
 fc_ets <- as_tibble(bind_rows(fc_ets_list))
 
 ## Forecast using ARIMA
 fc_arima_list <- list()
+fit_arima_list <- list()
 for (i in seq_along(forecast_date)){
   training_end_date <- forecast_date[i] - 1
-  fc_arima_list[[i]] <- time_series_forecast(data = data,
-                                             method = 'arima',
-                                             date_start = start_date,
-                                             date_end = training_end_date,
-                                             len = "14 days", ci = 95) %>% 
-    mutate(forecast_date=forecast_date[i])
+  fc_arima_out <- time_series_forecast(data = data,
+                                       method = 'arima',
+                                       date_start = start_date,
+                                       date_end = training_end_date,
+                                       len = "14 days", ci = 95)
+  fc_arima_list[[i]] <- fc_arima_out$fc %>% mutate(forecast_date=forecast_date[i])
+  fit_arima_list[[i]] <- fc_arima_out$fit
 }
 fc_arima <- as_tibble(bind_rows(fc_arima_list))
 
 ## Forecast using ARIMA with tweets data
 fc_arima_tweet_list <- list()
+fit_arima_tweet_list <- list()
 for (i in seq_along(forecast_date)){
   training_end_date <- forecast_date[i] - 1
-  fc_arima_tweet_list[[i]] <- time_series_tweets_forecast(data = data,
+  fc_arima_tweet_out <- time_series_tweets_forecast(data = data,
                                                           tweet_data = tweet_daily_data,
                                                           method = 'arima',
                                                           date_start = start_date,
                                                           date_end = training_end_date,
-                                                          len = "14 days", ci = 95) %>% 
-    mutate(forecast_date=forecast_date[i])
+                                                          len = "14 days", ci = 95)
+  fc_arima_tweet_list[[i]] <- fc_arima_tweet_out$fc %>% mutate(forecast_date=forecast_date[i])
+  fit_arima_tweet_list[[i]] <- fc_arima_tweet_out$fit
 }
 fc_arima_tweet <- as_tibble(bind_rows(fc_arima_tweet_list))
+
+## Forecast using ensemble
+fc_ensemble_list <- list()
+fit_ensemble_list <- list()
+for (i in seq_along(forecast_date)){
+  training_end_date <- forecast_date[i] - 1
+  fc_ensemble_out <- time_series_ensemble_forecast(data = data,
+                                                         tweet_data = tweet_daily_data,
+                                                         date_start = start_date,
+                                                         date_end = training_end_date,
+                                                         len = "14 days", ci = 95)
+  fc_ensemble_list[[i]] <- fc_ensemble_out$fc %>% mutate(forecast_date=forecast_date[i])
+  fit_ensemble_list[[i]] <- fc_ensemble_out$fit
+}
+fc_ensemble <- as_tibble(bind_rows(fc_ensemble_list))
 
 ## Output
 ## .csv output
 write_csv(fc_ets,"time_series_analysis_forecast/outputs/output_fc_ets.csv")
 write_csv(fc_arima,"time_series_analysis_forecast/outputs/output_fc_arima.csv")
 write_csv(fc_arima_tweet,"time_series_analysis_forecast/outputs/output_fc_arima_tweet.csv")
+write_csv(fc_ensemble,"time_series_analysis_forecast/outputs/output_fc_ensemble.csv")
+
+## Model fit output
+saveRDS(fit_ets_list,"time_series_analysis_forecast/outputs/fit_ets_list.rds")
+saveRDS(fit_arima_list,"time_series_analysis_forecast/outputs/fit_arima_list.rds")
+saveRDS(fit_arima_tweet_list,"time_series_analysis_forecast/outputs/fit_arima_tweet_list.rds")
+saveRDS(fit_ensemble_list,"time_series_analysis_forecast/outputs/fit_ensemble_list.rds")
 
 ## Combine data and all forecast
 output <- data %>% mutate(model="data") %>% 
   rename(x = cases) %>% 
-  bind_rows(fc_ets,fc_arima,fc_arima_tweet) %>% 
-  mutate(model = factor(model, levels = c("arima","ets","arima_tweet","data")))
+  bind_rows(fc_ets,fc_arima,fc_arima_tweet,fc_ensemble) %>% 
+  mutate(model = factor(model, levels = c("arima","ets","arima_tweet","ensemble","data")))
 
 fc_plot <- output %>% ggplot() +
   geom_ribbon(aes(x = date, ymin = lower, ymax = upper,

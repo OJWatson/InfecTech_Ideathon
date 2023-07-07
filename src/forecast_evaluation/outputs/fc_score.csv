@@ -1,4 +1,5 @@
 model,target_type,interval_score,dispersion,underprediction,overprediction,coverage_deviation,bias,ae_median
 arima,Cases,2300,860,56,1300,-0.0029,0.6,4100
 arima_tweet,Cases,2400,920,81,1400,-0.0048,0.55,4400
+ensemble,Cases,2700,1100,52,1600,-0.0019,0.64,4800
 ets,Cases,3600,1600,54,2000,-9.5e-4,0.64,6100
