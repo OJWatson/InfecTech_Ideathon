@@ -6,27 +6,27 @@ library(dplyr)
 library(tidyverse)
 library(cowplot)
 library(distributional)
-source("time_series_analysis_forecast/support.R")
+source("src/time_series_analysis_forecast/support.R")
 
 ## The output of this script is .csv files of forecast and
 ## graphs of all forecasts over time and the last set of forecast based on
 ## all data available
 
 ## Read GB Covid-19 time series of cases data from global.health
-data <- read_csv("data_covid_cases/outputs/cases_GB.csv")
+data <- read_csv("src/data_covid_cases/outputs/cases_GB.csv")
 
 ## Read processed tweets data from tweet_analysis folder
-tweet_data <- read_csv("tweet_analysis/tweets_and_topics.csv")
+tweet_data <- read_csv("src/tweet_analysis/tweets_and_topics.csv")
 
 ## Summarise tweet data - daily
-tweet_daily_data <- tweet_data %>% 
-  mutate(date = as.Date(date)) %>% 
-  group_by(date) %>% 
+tweet_daily_data <- tweet_data %>%
+  mutate(date = as.Date(date)) %>%
+  group_by(date) %>%
   summarise(topic_0 = sum(topic_0), topic_1 = sum(topic_1),
             topic_2 = sum(topic_2), topic_3 = sum(topic_3),
             topic_4 = sum(topic_4), topic_5 = sum(topic_5),
             topic_6 = sum(topic_6), topic_7 = sum(topic_7),
-            topic_8 = sum(topic_8), topic_9 = sum(topic_9)) %>% 
+            topic_8 = sum(topic_8), topic_9 = sum(topic_9)) %>%
   filter(date <= max(ymd(data$date)))
 
 ## Time series model: ETS and ARIMA
@@ -115,16 +115,16 @@ saveRDS(fit_arima_tweet_list,"time_series_analysis_forecast/outputs/fit_arima_tw
 saveRDS(fit_ensemble_list,"time_series_analysis_forecast/outputs/fit_ensemble_list.rds")
 
 ## Combine data and all forecast
-output <- data %>% mutate(model="data") %>% 
-  rename(x = cases) %>% 
-  bind_rows(fc_ets,fc_arima,fc_arima_tweet,fc_ensemble) %>% 
+output <- data %>% mutate(model="data") %>%
+  rename(x = cases) %>%
+  bind_rows(fc_ets,fc_arima,fc_arima_tweet,fc_ensemble) %>%
   mutate(model = factor(model, levels = c("arima","ets","arima_tweet","ensemble","data")))
 
 fc_plot <- output %>% ggplot() +
   geom_ribbon(aes(x = date, ymin = lower, ymax = upper,
                   col = model, fill = model)) +
   geom_point(aes(x = date, y = x, col = model, fill = model)) +
-  geom_line(aes(x = date, y = mean, 
+  geom_line(aes(x = date, y = mean,
                 col = model, group = forecast_date)) +
   scale_y_log10() +
   theme_bw() +
@@ -134,15 +134,15 @@ fc_plot <- output %>% ggplot() +
 ggsave("time_series_analysis_forecast/outputs/fc_over_time.png")
 
 ## Last set of forecast only
-output_last_fc <- output %>% 
+output_last_fc <- output %>%
   filter(model == "data" | forecast_date == forecast_date[length(forecast_date)])
 
-last_fc_plot <- output_last_fc %>% tail(100) %>% 
+last_fc_plot <- output_last_fc %>% tail(100) %>%
   ggplot() +
   geom_ribbon(aes(x = date, ymin = lower, ymax = upper,
                   col = model, fill = model)) +
   geom_point(aes(x = date, y = x, col = model, fill = model)) +
-  geom_line(aes(x = date, y = mean, 
+  geom_line(aes(x = date, y = mean,
                 col = model, fill = model, group = forecast_date)) +
   # scale_y_log10() +
   theme_bw() +
