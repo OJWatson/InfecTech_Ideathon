@@ -19,6 +19,10 @@ write_csv(cases, sprintf("outputs/cases_%s.csv", country))
 g <- cases %>%
   ggplot(aes(x = date, y = cases)) +
   geom_line() +
-  theme_bw()
+  theme_bw() +
+  labs(x = "", y = "UK Weekly Covid-19 Cases (000s)") +
+  scale_x_date(date_labels = "%b %y", date_breaks = "2 month") +
+  scale_y_continuous(labels = scales::unit_format(scale = 1e-3, suffix = "")) +
+  theme(axis.text.x = element_text(angle = 45, vjust = 1, hjust = 1))
 
-ggsave(sprintf("outputs/cases_%s.png", country))
+ggsave(sprintf("outputs/cases_%s.png", country), width = 10, height = 8, unit = "cm")
