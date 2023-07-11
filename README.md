@@ -16,15 +16,15 @@ source("src/data_covid_cases/script.R")
 
 Or alternatively the processed time series data are located here: [src/data_covid_cases/outputs/cases_GB.csv]
 
-![Weekly Covid cases in the UK](src/data_covid_cases/outputs/cases_GB.png)
+[Weekly Covid cases in the UK](src/data_covid_cases/outputs/cases_GB.png)
 
 ## Sourcing Predictor Data
 
 Researchers may wish to include additional data sets as predictors in their models, which may come from traditional sources (such as demographic or epidemiological data) or non-traditional sources (such as social media data). 
 
-We include an example here of how a twitter data set can be used as a predictor using topic modelling. Topic modelling is a method in which documents can be represented in terms of their relationship to abstract "topics". The full text cleaning and topic modelling process is documented in ![this jupyter notebook](src/tweet_analysis/text_cleaning.ipynb)
+We include an example here of how a twitter data set can be used as a predictor using topic modelling. Topic modelling is a method in which documents can be represented in terms of their relationship to abstract "topics". The full text cleaning and topic modelling process is documented in [this jupyter notebook](src/tweet_analysis/text_cleaning.ipynb)
 
-The resulting data set, tweets with topic scores is ![here](src/tweet_analysis/tweets_and_topics.csv)
+The resulting data set, tweets with topic scores is [here](src/tweet_analysis/tweets_and_topics.csv)
 
 ## Forecast Modelling
 
@@ -37,10 +37,10 @@ Researchers will use their models (and potentially predictor data) to produce fo
 Substantial mathematical and statistical frameworks were developed during the pandemic to evaluate model forecasts, however, outputs not always easy to interpret by policymakers, nor suited to their purposes - for example evaluating performance based on mean absolute error, rather than statistics policy-makers may care more about such as minimising downside risk.
 
 We include an example of a standard forecast evaluation output along with our human-interpretable, policy focussed version, and show how our foundational principle of improving the interpretability and usefulness of model performance analytics to policy-makers can be carried forward from individual model assessment to the creation of ensemble models 
-![here](src/human_interpretable/script.html)
+[here](https://htmlpreview.github.io/?https://raw.githubusercontent.com/OJWatson/InfecTech/main/src/human_interpretable/script.html?token=GHSAT0AAAAAAB325AMYKTUTYAT5OCNXIPJSZFNJM3A)
 
 ## Deep Learning based Forecasts
 
 We experimented with Sequence to Sequence, deep learning alternatives to the
 ARIMA forecast. An in-depth description of those experiments are listed in that
-![readme](src/train_tweet_forecaster/README.md)
+[readme](src/train_tweet_forecaster/README.md)
