@@ -7,12 +7,12 @@ This README provides a description of the discrete coding tasks conducted when r
 
 ```
 1. data_covid_cases
-1. data_simulate_twee_counts
-1. tweet_analysis
-1. time_series_analysis_forecast
-1. forecast_evaluation
-1. human_interpretable
-1. train_tweet_forecaster
+2. data_simulate_twee_counts
+3. tweet_analysis
+4. time_series_analysis_forecast
+5. forecast_evaluation
+6. human_interpretable
+7. train_tweet_forecaster
 ```
 In this order, the tasks generate outputs that are then used in later tasks. 
 
