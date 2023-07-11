@@ -140,10 +140,10 @@ arima_case_forecast <- ggplot() +
   geom_point(data = subset(filtered_output, model == "arima"),
              aes(x = date, y = x, col = forecast_date, fill = forecast_date)) +
   geom_line(data = subset(filtered_output, model == "arima"),
-            aes(x = date, y = mean, 
+            aes(x = date, y = mean,
                 col = forecast_date, group = forecast_date)) +
-  annotate("rect", fill = NA, col = "black", 
-           xmin = as.Date("2022-03-29"), 
+  annotate("rect", fill = NA, col = "black",
+           xmin = as.Date("2022-03-29"),
            xmax = as.Date("2022-04-15"),
            ymin = 350,
            ymax = 10^5,
@@ -157,7 +157,7 @@ arima_case_forecast <- ggplot() +
   labs(x = "Date", y = "COVID-19 Cases", col = NULL, fill = NULL,
        title = "ARIMA Forecasting of Case Incidence Using Case Data")
 
-output_last_fc <- output %>% 
+output_last_fc <- output %>%
   filter(model == "data" | forecast_date == forecast_date[length(forecast_date)]) %>%
   tail(100)
 arima_case_forecast_final <- ggplot() +
@@ -169,7 +169,7 @@ arima_case_forecast_final <- ggplot() +
   geom_point(data = subset(output_last_fc, model == "arima"),
              aes(x = date, y = x, col = model, fill = model)) +
   geom_line(data = subset(output_last_fc, model == "arima"),
-            aes(x = date, y = mean, 
+            aes(x = date, y = mean,
                 col = model, fill = model, group = forecast_date)) +
   scale_y_log10() +
   theme_bw() +
@@ -185,9 +185,9 @@ arima_case_overall_plot <- arima_case_forecast +
 
 arima_case_overall_plot
 ggsave(plot = arima_case_overall_plot,
-       width = 9.5, 
+       width = 9.5,
        height = 6.1,
-       filename = "src/time_series_analysis_forecast/outputs/new_arima_case_data_forecasting.png")
+       filename = "src/time_series_analysis_forecast/outputs/arima_case_data_forecasting.png")
 
 #### Filtered to ARIMA and tweets only
 
@@ -204,10 +204,10 @@ arima_case_forecast <- ggplot() +
   geom_point(data = subset(filtered_output, model == "arima"),
              aes(x = date, y = x, col = forecast_date, fill = forecast_date)) +
   geom_line(data = subset(filtered_output, model == "arima"),
-            aes(x = date, y = mean, 
+            aes(x = date, y = mean,
                 col = forecast_date, group = forecast_date)) +
-  annotate("rect", fill = NA, col = "black", 
-           xmin = as.Date("2022-03-29"), 
+  annotate("rect", fill = NA, col = "black",
+           xmin = as.Date("2022-03-29"),
            xmax = as.Date("2022-04-15"),
            ymin = 350,
            ymax = 10^5,
@@ -221,7 +221,7 @@ arima_case_forecast <- ggplot() +
   labs(x = "Date", y = "COVID-19 Cases", col = NULL, fill = NULL,
        title = "ARIMA Forecasting of Case Incidence Using Case Data")
 
-output_last_fc <- output %>% 
+output_last_fc <- output %>%
   filter(model == "data" | forecast_date == forecast_date[length(forecast_date)]) %>%
   tail(100)
 arima_case_forecast_final <- ggplot() +
@@ -233,7 +233,7 @@ arima_case_forecast_final <- ggplot() +
   geom_point(data = subset(output_last_fc, model == "arima"),
              aes(x = date, y = x, col = model, fill = model)) +
   geom_line(data = subset(output_last_fc, model == "arima"),
-            aes(x = date, y = mean, 
+            aes(x = date, y = mean,
                 col = model, fill = model, group = forecast_date)) +
   scale_y_log10() +
   theme_bw() +
@@ -245,40 +245,5 @@ arima_case_forecast_final <- ggplot() +
 arima_case_overall_plot <- arima_case_forecast +
   annotation_custom(
     ggplotGrob(arima_case_forecast_final),
-    xmin = as.Date("2021-02-01
+    xmin = as.Date("2021-02-01"))
 
-
-
-### Old ###################
-
-
-fc_plot <- output %>% ggplot() +
-  geom_ribbon(aes(x = date, ymin = lower, ymax = upper,
-                  col = model, fill = model)) +
-  geom_point(aes(x = date, y = x, col = model, fill = model)) +
-  geom_line(aes(x = date, y = mean,
-                col = model, group = forecast_date)) +
-  scale_y_log10() +
-  theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(x = "Date", y = "Cases", col = NULL, fill = NULL)
-
-ggsave("time_series_analysis_forecast/outputs/fc_over_time.png")
-
-## Last set of forecast only
-output_last_fc <- output %>%
-  filter(model == "data" | forecast_date == forecast_date[length(forecast_date)])
-
-last_fc_plot <- output_last_fc %>% tail(100) %>%
-  ggplot() +
-  geom_ribbon(aes(x = date, ymin = lower, ymax = upper,
-                  col = model, fill = model)) +
-  geom_point(aes(x = date, y = x, col = model, fill = model)) +
-  geom_line(aes(x = date, y = mean,
-                col = model, fill = model, group = forecast_date)) +
-  # scale_y_log10() +
-  theme_bw() +
-  theme(legend.position = "bottom") +
-  labs(x = "Date", y = "Cases", col = NULL, fill = NULL)
-
-ggsave("time_series_analysis_forecast/outputs/fc_last.png")
