@@ -57,3 +57,11 @@ We include an example of a standard forecast evaluation output along with our hu
 We experimented with Sequence to Sequence, deep learning alternatives to the
 ARIMA forecast. An in-depth description of those experiments are listed in that
 [readme](src/train_tweet_forecaster/README.md)
+
+# LICENCE
+
+The code in this repository is licenced under a permissive [MIT licence](https://opensource.org/licenses/MIT). All other content is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). This means you may use any content in this repository as long as you credit the authors.
+
+# REPRODUCIBILITY
+
+We us `renv` to track package dependencies for reproducibility. Please use `renv::restore` to restore the state of the project and see https://rstudio.github.io/renv/articles/renv.html for more information. This reproducibility infrastructure is included for scripts that use R code. For python code/notebooks, dependencies are declared in these task directories. 
