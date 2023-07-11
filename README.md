@@ -3,9 +3,22 @@ For the next pandemic
 
 Slides are here: https://docs.google.com/presentation/d/1Vrt-Dy5cherOvEgm_qoKv_k9fVKMPKyANIPI6jVlueI/edit?usp=sharing
 
+This README provides a description of the discrete coding tasks conducted when responding to the challenge question. Each of the discreate coding tasks are available in `src/`, which are executed in the following order:
+
+```
+1. data_covid_cases
+1. data_simulate_twee_counts
+1. tweet_analysis
+1. time_series_analysis_forecast
+1. forecast_evaluation
+1. human_interpretable
+1. train_tweet_forecaster
+```
+In this order, the tasks generate outputs that are then used in later tasks. 
+
 ## Sourcing Target Data
 
-Target data will depend on the question being asked by policy-makers. Researchers will source this data either privately or from API databases (e.g. Global.Health) 
+Target data will depend on the question being asked by policy-makers. Researchers will source data to answer these question, either using data shared by policy makers (not available for the Ideathon Challenge) or access from API databases (e.g.  data either privately or from API databases (e.g. Global.Health) 
 
 We include an example where target data is the number of Covid cases in the UK which has been transformed from the linelist hosted on Global.Health into a time series
 
