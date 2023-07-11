@@ -36,9 +36,8 @@ Researchers will use their models (and potentially predictor data) to produce fo
 
 Substantial mathematical and statistical frameworks were developed during the pandemic to evaluate model forecasts, however, outputs not always easy to interpret by policymakers, nor suited to their purposes - for example evaluating performance based on mean absolute error, rather than statistics policy-makers may care more about such as minimising downside risk.
 
-We include an example of a standard forecast evaluation output along with our human-interpretable, policy focussed version, and show how our foundational principle of improving the interpretability and usefulness of model performance analytics to policy-makers can be carried forward from individual model assessment to the creation of ensemble models:
-
-[src/human_interpretable/script.html]
+We include an example of a standard forecast evaluation output along with our human-interpretable, policy focussed version, and show how our foundational principle of improving the interpretability and usefulness of model performance analytics to policy-makers can be carried forward from individual model assessment to the creation of ensemble models 
+![here](src/human_interpretable/script.html)
 
 ## Deep Learning based Forecasts
 
