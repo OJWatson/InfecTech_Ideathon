@@ -22,9 +22,9 @@ Or alternatively the processed time series data are located here: [src/data_covi
 
 Researchers may wish to include additional data sets as predictors in their models, which may come from traditional sources (such as demographic or epidemiological data) or non-traditional sources (such as social media data). 
 
-We include an example here of a twitter data that from which topic data has been inferred using [Giovanni's brain]
+We include an example here of how a twitter data set can be used as a predictor using topic modelling. Topic modelling is a method in which documents can be represented in terms of their relationship to abstract "topics". The full text cleaning and topic modelling process is documented in ![this jupyter notebook](src/tweet_analysis/text_cleaning.ipynb)
 
-located here: [src/tweet_analysis/tweets_and_topics.csv]
+The resulting data set, tweets with topic scores is ![here](src/tweet_analysis/tweets_and_topics.csv)
 
 ## Forecast Modelling
 
@@ -40,13 +40,8 @@ We include an example of a standard forecast evaluation output along with our hu
 
 [src/human_interpretable/script.html]
 
+## Deep Learning based Forecasts
 
-
-
-
-
-
-
-
-
-
+We experimented with Sequence to Sequence, deep learning alternatives to the
+ARIMA forecast. An in-depth description of those experiments are listed in that
+![readme](src/train_tweet_forecaster/README.md)
