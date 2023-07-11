@@ -1,0 +1,212 @@
+---
+title: "Human summaries of historic model forecasts"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Efficacy}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+
+options(dplyr.summarise.inform = FALSE)
+library(tidyverse)
+```
+
+
+Historic model performance is a key predictor of future model performance, and models are only useful tools when we are aware of their accuracy and their uncertainty. However, conventional model scoring tools (error, bias, dispersion etc) do not answer policy makers questions. Models, terminology, pitfalls, uncertainty, unforeseen dynamics - it all complicates what should be simple:
+
+> What is the answer to my question? 
+
+> Have we procured enough tests for the next 2 weeks? 
+
+> If I have not, how confident are you that we will run out of tests? 
+
+To address these needs, we focus on developing simple tools that can convert historical forecasts into actionable statements for decision makers. 
+
+### Historical Forecasts
+
+First, let's fetch our historical forecasts:
+
+```{r, echo = TRUE, warning=FALSE}
+# Fetch forecasts of each model
+fc_ets <- read_csv("../time_series_analysis_forecast/outputs/output_fc_ets.csv", show_col_types = FALSE)
+fc_arima <- read_csv("../time_series_analysis_forecast/outputs/output_fc_arima.csv", show_col_types = FALSE)
+fc_arima_tweet <- read_csv("../time_series_analysis_forecast/outputs/output_fc_arima_tweet.csv", show_col_types = FALSE)
+fc_ensemble <- read_csv("../time_series_analysis_forecast/outputs/output_fc_ensemble.csv", show_col_types = FALSE)
+
+## Read our true case data
+data <- read_csv("../data_covid_cases/outputs/cases_GB.csv", show_col_types = FALSE)
+
+## Combine forecasts and data
+fc_all <- bind_rows(fc_arima,fc_ets,fc_arima_tweet,fc_ensemble) %>%
+    pivot_longer(-c(model,date,ci_level,forecast_date),
+                 names_to="quantile_old",values_to="prediction") %>%
+    mutate(quantile=ifelse(quantile_old=="mean",0.5,
+                           ifelse(quantile_old=="lower",0.025,0.975)),
+           target_type="Cases",
+           location="GB") %>%
+    dplyr::select(model,target_end_date=date,target_type,location,
+                  quantile,prediction,forecast_date) %>%
+    left_join(data %>% dplyr::select(target_end_date=date,true_value=cases)) %>%
+    filter(target_end_date<ymd("2022-03-29")) %>% 
+    pivot_wider(names_from = quantile, values_from = prediction) %>% 
+    rename(prediction = `0.5`, prediction_025 = `0.025`, prediction_975 = `0.975`)
+
+
+```
+
+Historical forecast data, whether it is cases, hospitalisations or non-infectious disease data, e.g. temperature or acute malnutrition, can be standardised into key components:
+
+1. The quantity being forecasted
+2. The date for those forecasts
+3. The data at which those forecasts were made
+
+Additionally, there may be additional forecast information on the uncertainty (quantile predictions). But beyond that, we argue that forecast data can be easily standardised making this a tractable and generalisable data format to program against. This is why packages such as `scoringutils` are very effective. However, they don't provide policy makers with answers. 
+
+### Answering our policy question
+
+For a given question, here "Have I ordered enough COVID-19 tests" we can write functions to answer this question.
+
+```{r, echo = TRUE, warning=FALSE, message=FALSE}
+# Function to evaluate our policy questions, 
+# i.e. how often would we order enough tests if based on predicted medians
+total_overprediction <- function(fc_all) {
+  
+  fc_all %>% 
+    group_by(forecast_date, model) %>%
+    summarise(outcome = sum(prediction) > sum(true_value)) %>% 
+    ungroup() %>% 
+    group_by(model) %>% 
+    summarise(outcome = scales::percent(mean(outcome)))
+  
+}
+
+```
+
+We could then apply this to our model forecasts to not only identify how often
+we would have correctly ordered sufficient tests:
+
+```{r, echo = TRUE, warning=FALSE, message=FALSE}
+# create our answer to the question
+test_procurement <- fc_all %>% 
+  group_by(model) %>% 
+  group_map(~total_overprediction(.x), .keep = TRUE) %>% 
+  map_dfr(bind_rows) %>% 
+  rename(Model = model, `Sufficient Tests` = outcome)
+
+knitr::kable(test_procurement)
+
+```
+
+Clearly all the models are good at ensuring enough tests would be produced, and
+we can go back to our policy maker and say:
+
+> "In the last 2 years, 9 times out of 10 you would have ordered enough tests."
+
+Now that is a lot more helpful than:
+
+```{r, echo = TRUE, warning=FALSE, message=FALSE}
+# Read in formal scores
+fc_score <- read_csv("../forecast_evaluation/outputs/fc_score.csv", show_col_types = FALSE)
+knitr::kable(fc_score) %>%
+  kableExtra::kable_styling(font_size = 8)
+
+```
+
+### Aren't these biased models though?
+
+Clearly a model that overpredicts the total case incidence 90% of the time is biased. 
+And we can definitely see that from the earlier model scoring table (all the `bias`
+values are much higher than 0, which indicats no bias). Here, we clearly see the
+disconnect between how researchers and forecast evaluators may view models and the
+questions and concerns that a different stakeholder may have. 
+
+For example, let's consider we are suporting the head of hospital procurment. They are
+using case incidence to prepare for the eventual demands on hospital capacity and 
+will likely have a different question for us. For example:
+
+> I have a limited budget and need to know whether to allocate more in the future. 
+
+> How confident are you that cases and thus hospital demand will increase in the future.
+
+Again, we can turn this into a generic function that summarises our forecasts:
+
+```{r, echo = TRUE, warning=FALSE, message=FALSE}
+# Function to evaluate our policy questions, 
+# i.e. how often do we correctly predict if cases are going to increase. 
+correctly_increases <- function(fc_all) {
+  
+fc_all %>% 
+    group_by(forecast_date, model) %>%
+    summarise(prediction = sum(prediction),
+              true_value = sum(true_value)) %>% 
+    group_by(model) %>% 
+    mutate(lagged_prediction = lag(prediction),
+           lagged_true = lag(true_value)) %>% 
+    group_by(model, forecast_date) %>% 
+    filter(true_value > lagged_true) %>% 
+    summarise(outcome = prediction > lagged_prediction) %>% 
+    na.omit %>% 
+    group_by(model) %>% 
+    summarise(outcome = scales::percent(mean(outcome)))
+              
+}
+
+```
+
+We could again apply this to our model forecasts to answer how often we would have
+correctly forecast that cases would increase in the next two weeks:
+
+```{r, echo = TRUE, warning=FALSE, message=FALSE}
+# create our answer to the question
+cases_increasing <- fc_all %>% 
+  group_by(model) %>% 
+  group_map(~correctly_increases(.x), .keep = TRUE) %>% 
+  map_dfr(bind_rows) %>% 
+  rename(Model = model, `Correctly Forecasts Cases Increasing` = outcome)
+
+knitr::kable(cases_increasing)
+
+```
+
+Clearly all the models are not very good at forecasting if cases will increase, and
+we can go back to our head of hospital procurement and say:
+
+> "In the last 2 years, more than 70% of the time we correctly predicted that cases would increase"
+
+We can also observe here that the different models start to perform quite differently. 
+In fact, the best model is the ARIMA model that incorporated information based on trends
+in Twitter data - the non-traditional data added value!!!
+
+We may then want to put more weight on this model when constructing our ensemble, if the 
+question we are concerned with is focussed on correctly predicting if cases increase
+in the next 2 weeks. However, if we solely weighted by mean absolute error, we would 
+put more weight on the default ARIMA model. 
+
+This brief example highlights the disconnect with how model forecasters often evaluate
+their models (frequently mean absolute error, or the weighted interval scored) and the 
+performance of models for questions that different stakeholders have. 
+
+### Can policy makers answer their own questions?
+
+... wouldn't that be nice?
+
+Well, it could be possible. We have detailed how forecast data can be standardised and 
+we show how simple functions can be used to provide summaries for specific questions. However, 
+it is easy to see how we could generalise across frequently asked questions:
+
+1. Do forecasts correctly identify increases/decreases?
+2. Do forecasts over/underpredict? 
+3. How much do forecasts over/underpredict? 
+
+These are the common questions that we as a team were asked during the pandemic, 
+but to expand this we would need to conduct listening exercises, engaging researchers
+and stakeholders in different countries as well as individuals working on different
+diseases or research areas entirely. Forecast data structures are always the same and
+this lends the ability to a tool that can generalise human interpretable answers to be
+one with wide impact. 

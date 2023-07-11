@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="pandoc" />
+<meta http-equiv="X-UA-Compatible" content="IE=EDGE" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+
+
+<title>Human summaries of historic model forecasts</title>
+
+<script>// Pandoc 2.9 adds attributes on both header and div. We remove the former (to
+// be compatible with the behavior of Pandoc < 2.8).
+document.addEventListener('DOMContentLoaded', function(e) {
+  var hs = document.querySelectorAll("div.section[class*='level'] > :first-child");
+  var i, h, a;
+  for (i = 0; i < hs.length; i++) {
+    h = hs[i];
+    if (!/^h[1-6]$/i.test(h.tagName)) continue;  // it should be a header h1-h6
+    a = h.attributes;
+    while (a.length > 0) h.removeAttribute(a[0].name);
+  }
+});
+</script>
+<script>$(document).ready(function(){
+    if (typeof $('[data-toggle="tooltip"]').tooltip === 'function') {
+        $('[data-toggle="tooltip"]').tooltip();
+    }
+    if ($('[data-toggle="popover"]').popover === 'function') {
+        $('[data-toggle="popover"]').popover();
+    }
+});
+</script>
+<style type="text/css">
+.lightable-minimal {
+border-collapse: separate;
+border-spacing: 16px 1px;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-minimal td {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal th {
+margin-left: 5px;
+margin-right: 5px;
+}
+.lightable-minimal thead tr:last-child th {
+border-bottom: 2px solid #00000050;
+empty-cells: hide;
+}
+.lightable-minimal tbody tr:first-child td {
+padding-top: 0.5em;
+}
+.lightable-minimal.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-minimal.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic {
+border-top: 0.16em solid #111111;
+border-bottom: 0.16em solid #111111;
+width: 100%;
+margin-bottom: 10px;
+margin: 10px 5px;
+}
+.lightable-classic tfoot tr td {
+border: 0;
+}
+.lightable-classic tfoot tr:first-child td {
+border-top: 0.14em solid #111111;
+}
+.lightable-classic caption {
+color: #222222;
+}
+.lightable-classic td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic thead tr:last-child th {
+border-bottom: 0.10em solid #111111;
+}
+.lightable-classic.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-classic-2 {
+border-top: 3px double #111111;
+border-bottom: 3px double #111111;
+width: 100%;
+margin-bottom: 10px;
+}
+.lightable-classic-2 tfoot tr td {
+border: 0;
+}
+.lightable-classic-2 tfoot tr:first-child td {
+border-top: 3px double #111111;
+}
+.lightable-classic-2 caption {
+color: #222222;
+}
+.lightable-classic-2 td {
+padding-left: 5px;
+padding-right: 5px;
+color: #222222;
+}
+.lightable-classic-2 th {
+padding-left: 5px;
+padding-right: 5px;
+font-weight: normal;
+color: #222222;
+}
+.lightable-classic-2 tbody tr:last-child td {
+border-bottom: 3px double #111111;
+}
+.lightable-classic-2 thead tr:last-child th {
+border-bottom: 1px solid #111111;
+}
+.lightable-classic-2.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-classic-2.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #EEE;
+border-collapse: collapse;
+margin-bottom: 10px;
+}
+.lightable-material tfoot tr td {
+border: 0;
+}
+.lightable-material tfoot tr:first-child td {
+border-top: 1px solid #EEE;
+}
+.lightable-material th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+}
+.lightable-material td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+border-top: 1px solid #eeeeee;
+}
+.lightable-material.lightable-hover tbody tr:hover {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody tr:nth-child(even) {
+background-color: #f5f5f5;
+}
+.lightable-material.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #ddd;
+}
+.lightable-material-dark {
+min-width: 100%;
+white-space: nowrap;
+table-layout: fixed;
+font-family: Roboto, sans-serif;
+border: 1px solid #FFFFFF12;
+border-collapse: collapse;
+margin-bottom: 10px;
+background-color: #363640;
+}
+.lightable-material-dark tfoot tr td {
+border: 0;
+}
+.lightable-material-dark tfoot tr:first-child td {
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark th {
+height: 56px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF60;
+}
+.lightable-material-dark td {
+height: 52px;
+padding-left: 16px;
+padding-right: 16px;
+color: #FFFFFF;
+border-top: 1px solid #FFFFFF12;
+}
+.lightable-material-dark.lightable-hover tbody tr:hover {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody tr:nth-child(even) {
+background-color: #FFFFFF12;
+}
+.lightable-material-dark.lightable-striped tbody td {
+border: 0;
+}
+.lightable-material-dark.lightable-striped thead tr:last-child th {
+border-bottom: 1px solid #FFFFFF12;
+}
+.lightable-paper {
+width: 100%;
+margin-bottom: 10px;
+color: #444;
+}
+.lightable-paper tfoot tr td {
+border: 0;
+}
+.lightable-paper tfoot tr:first-child td {
+border-top: 1px solid #00000020;
+}
+.lightable-paper thead tr:last-child th {
+color: #666;
+vertical-align: bottom;
+border-bottom: 1px solid #00000020;
+line-height: 1.15em;
+padding: 10px 5px;
+}
+.lightable-paper td {
+vertical-align: middle;
+border-bottom: 1px solid #00000010;
+line-height: 1.15em;
+padding: 7px 5px;
+}
+.lightable-paper.lightable-hover tbody tr:hover {
+background-color: #F9EEC1;
+}
+.lightable-paper.lightable-striped tbody tr:nth-child(even) {
+background-color: #00000008;
+}
+.lightable-paper.lightable-striped tbody td {
+border: 0;
+}
+</style>
+
+<style type="text/css">
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+span.underline{text-decoration: underline;}
+div.column{display: inline-block; vertical-align: top; width: 50%;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+</style>
+
+
+
+<style type="text/css">
+code {
+white-space: pre;
+}
+.sourceCode {
+overflow: visible;
+}
+</style>
+<style type="text/css" data-origin="pandoc">
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+{ counter-reset: source-line 0; }
+pre.numberSource code > span
+{ position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+{ content: counter(source-line);
+position: relative; left: -1em; text-align: right; vertical-align: baseline;
+border: none; display: inline-block;
+-webkit-touch-callout: none; -webkit-user-select: none;
+-khtml-user-select: none; -moz-user-select: none;
+-ms-user-select: none; user-select: none;
+padding: 0 4px; width: 4em;
+color: #aaaaaa;
+}
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa; padding-left: 4px; }
+div.sourceCode
+{ }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } 
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.at { color: #7d9029; } 
+code span.bn { color: #40a070; } 
+code span.bu { color: #008000; } 
+code span.cf { color: #007020; font-weight: bold; } 
+code span.ch { color: #4070a0; } 
+code span.cn { color: #880000; } 
+code span.co { color: #60a0b0; font-style: italic; } 
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.do { color: #ba2121; font-style: italic; } 
+code span.dt { color: #902000; } 
+code span.dv { color: #40a070; } 
+code span.er { color: #ff0000; font-weight: bold; } 
+code span.ex { } 
+code span.fl { color: #40a070; } 
+code span.fu { color: #06287e; } 
+code span.im { color: #008000; font-weight: bold; } 
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } 
+code span.kw { color: #007020; font-weight: bold; } 
+code span.op { color: #666666; } 
+code span.ot { color: #007020; } 
+code span.pp { color: #bc7a00; } 
+code span.sc { color: #4070a0; } 
+code span.ss { color: #bb6688; } 
+code span.st { color: #4070a0; } 
+code span.va { color: #19177c; } 
+code span.vs { color: #4070a0; } 
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } 
+</style>
+<script>
+// apply pandoc div.sourceCode style to pre.sourceCode instead
+(function() {
+  var sheets = document.styleSheets;
+  for (var i = 0; i < sheets.length; i++) {
+    if (sheets[i].ownerNode.dataset["origin"] !== "pandoc") continue;
+    try { var rules = sheets[i].cssRules; } catch (e) { continue; }
+    var j = 0;
+    while (j < rules.length) {
+      var rule = rules[j];
+      // check if there is a div.sourceCode rule
+      if (rule.type !== rule.STYLE_RULE || rule.selectorText !== "div.sourceCode") {
+        j++;
+        continue;
+      }
+      var style = rule.style.cssText;
+      // check if color or background-color is set
+      if (rule.style.color === '' && rule.style.backgroundColor === '') {
+        j++;
+        continue;
+      }
+      // replace div.sourceCode by a pre.sourceCode rule
+      sheets[i].deleteRule(j);
+      sheets[i].insertRule('pre.sourceCode{' + style + '}', j);
+    }
+  }
+})();
+</script>
+
+
+
+
+<style type="text/css">body {
+background-color: #fff;
+margin: 1em auto;
+max-width: 700px;
+overflow: visible;
+padding-left: 2em;
+padding-right: 2em;
+font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size: 14px;
+line-height: 1.35;
+}
+#TOC {
+clear: both;
+margin: 0 0 10px 10px;
+padding: 4px;
+width: 400px;
+border: 1px solid #CCCCCC;
+border-radius: 5px;
+background-color: #f6f6f6;
+font-size: 13px;
+line-height: 1.3;
+}
+#TOC .toctitle {
+font-weight: bold;
+font-size: 15px;
+margin-left: 5px;
+}
+#TOC ul {
+padding-left: 40px;
+margin-left: -1.5em;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+#TOC ul ul {
+margin-left: -2em;
+}
+#TOC li {
+line-height: 16px;
+}
+table {
+margin: 1em auto;
+border-width: 1px;
+border-color: #DDDDDD;
+border-style: outset;
+border-collapse: collapse;
+}
+table th {
+border-width: 2px;
+padding: 5px;
+border-style: inset;
+}
+table td {
+border-width: 1px;
+border-style: inset;
+line-height: 18px;
+padding: 5px 5px;
+}
+table, table th, table td {
+border-left-style: none;
+border-right-style: none;
+}
+table thead, table tr.even {
+background-color: #f7f7f7;
+}
+p {
+margin: 0.5em 0;
+}
+blockquote {
+background-color: #f6f6f6;
+padding: 0.25em 0.75em;
+}
+hr {
+border-style: solid;
+border: none;
+border-top: 1px solid #777;
+margin: 28px 0;
+}
+dl {
+margin-left: 0;
+}
+dl dd {
+margin-bottom: 13px;
+margin-left: 13px;
+}
+dl dt {
+font-weight: bold;
+}
+ul {
+margin-top: 0;
+}
+ul li {
+list-style: circle outside;
+}
+ul ul {
+margin-bottom: 0;
+}
+pre, code {
+background-color: #f7f7f7;
+border-radius: 3px;
+color: #333;
+white-space: pre-wrap; 
+}
+pre {
+border-radius: 3px;
+margin: 5px 0px 10px 0px;
+padding: 10px;
+}
+pre:not([class]) {
+background-color: #f7f7f7;
+}
+code {
+font-family: Consolas, Monaco, 'Courier New', monospace;
+font-size: 85%;
+}
+p > code, li > code {
+padding: 2px 0px;
+}
+div.figure {
+text-align: center;
+}
+img {
+background-color: #FFFFFF;
+padding: 2px;
+border: 1px solid #DDDDDD;
+border-radius: 3px;
+border: 1px solid #CCCCCC;
+margin: 0 5px;
+}
+h1 {
+margin-top: 0;
+font-size: 35px;
+line-height: 40px;
+}
+h2 {
+border-bottom: 4px solid #f7f7f7;
+padding-top: 10px;
+padding-bottom: 2px;
+font-size: 145%;
+}
+h3 {
+border-bottom: 2px solid #f7f7f7;
+padding-top: 10px;
+font-size: 120%;
+}
+h4 {
+border-bottom: 1px solid #f7f7f7;
+margin-left: 8px;
+font-size: 105%;
+}
+h5, h6 {
+border-bottom: 1px solid #ccc;
+font-size: 105%;
+}
+a {
+color: #0033dd;
+text-decoration: none;
+}
+a:hover {
+color: #6666ff; }
+a:visited {
+color: #800080; }
+a:visited:hover {
+color: #BB00BB; }
+a[href^="http:"] {
+text-decoration: underline; }
+a[href^="https:"] {
+text-decoration: underline; }
+
+code > span.kw { color: #555; font-weight: bold; } 
+code > span.dt { color: #902000; } 
+code > span.dv { color: #40a070; } 
+code > span.bn { color: #d14; } 
+code > span.fl { color: #d14; } 
+code > span.ch { color: #d14; } 
+code > span.st { color: #d14; } 
+code > span.co { color: #888888; font-style: italic; } 
+code > span.ot { color: #007020; } 
+code > span.al { color: #ff0000; font-weight: bold; } 
+code > span.fu { color: #900; font-weight: bold; } 
+code > span.er { color: #a61717; background-color: #e3d2d2; } 
+</style>
+
+
+
+
+</head>
+
+<body>
+
+
+
+
+<h1 class="title toc-ignore">Human summaries of historic model
+forecasts</h1>
+
+
+
+<p>Historic model performance is a key predictor of future model
+performance, and models are only useful tools when we are aware of their
+accuracy and their uncertainty. However, conventional model scoring
+tools (error, bias, dispersion etc) do not answer policy makers
+questions. Models, terminology, pitfalls, uncertainty, unforeseen
+dynamics - it all complicates what should be simple:</p>
+<blockquote>
+<p>What is the answer to my question?</p>
+</blockquote>
+<blockquote>
+<p>Have we procured enough tests for the next 2 weeks?</p>
+</blockquote>
+<blockquote>
+<p>If I have not, how confident are you that we will run out of
+tests?</p>
+</blockquote>
+<p>To address these needs, we focus on developing simple tools that can
+convert historical forecasts into actionable statements for decision
+makers.</p>
+<div id="historical-forecasts" class="section level3">
+<h3>Historical Forecasts</h3>
+<p>First, let’s fetch our historical forecasts:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Fetch forecasts of each model</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>fc_ets <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../time_series_analysis_forecast/outputs/output_fc_ets.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>fc_arima <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../time_series_analysis_forecast/outputs/output_fc_arima.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>fc_arima_tweet <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../time_series_analysis_forecast/outputs/output_fc_arima_tweet.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>fc_ensemble <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../time_series_analysis_forecast/outputs/output_fc_ensemble.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="do">## Read our true case data</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../data_covid_cases/outputs/cases_GB.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="do">## Combine forecasts and data</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>fc_all <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(fc_arima,fc_ets,fc_arima_tweet,fc_ensemble) <span class="sc">%&gt;%</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(<span class="sc">-</span><span class="fu">c</span>(model,date,ci_level,forecast_date),</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>                 <span class="at">names_to=</span><span class="st">&quot;quantile_old&quot;</span>,<span class="at">values_to=</span><span class="st">&quot;prediction&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">quantile=</span><span class="fu">ifelse</span>(quantile_old<span class="sc">==</span><span class="st">&quot;mean&quot;</span>,<span class="fl">0.5</span>,</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>                           <span class="fu">ifelse</span>(quantile_old<span class="sc">==</span><span class="st">&quot;lower&quot;</span>,<span class="fl">0.025</span>,<span class="fl">0.975</span>)),</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>           <span class="at">target_type=</span><span class="st">&quot;Cases&quot;</span>,</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>           <span class="at">location=</span><span class="st">&quot;GB&quot;</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    dplyr<span class="sc">::</span><span class="fu">select</span>(model,<span class="at">target_end_date=</span>date,target_type,location,</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>                  quantile,prediction,forecast_date) <span class="sc">%&gt;%</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(data <span class="sc">%&gt;%</span> dplyr<span class="sc">::</span><span class="fu">select</span>(<span class="at">target_end_date=</span>date,<span class="at">true_value=</span>cases)) <span class="sc">%&gt;%</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(target_end_date<span class="sc">&lt;</span><span class="fu">ymd</span>(<span class="st">&quot;2022-03-29&quot;</span>)) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_wider</span>(<span class="at">names_from =</span> quantile, <span class="at">values_from =</span> prediction) <span class="sc">%&gt;%</span> </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rename</span>(<span class="at">prediction =</span> <span class="st">`</span><span class="at">0.5</span><span class="st">`</span>, <span class="at">prediction_025 =</span> <span class="st">`</span><span class="at">0.025</span><span class="st">`</span>, <span class="at">prediction_975 =</span> <span class="st">`</span><span class="at">0.975</span><span class="st">`</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a><span class="co">#&gt; Joining with `by = join_by(target_end_date)`</span></span></code></pre></div>
+<p>Historical forecast data, whether it is cases, hospitalisations or
+non-infectious disease data, e.g. temperature or acute malnutrition, can
+be standardised into key components:</p>
+<ol style="list-style-type: decimal">
+<li>The quantity being forecasted</li>
+<li>The date for those forecasts</li>
+<li>The data at which those forecasts were made</li>
+</ol>
+<p>Additionally, there may be additional forecast information on the
+uncertainty (quantile predictions). But beyond that, we argue that
+forecast data can be easily standardised making this a tractable and
+generalisable data format to program against. This is why packages such
+as <code>scoringutils</code> are very effective. However, they don’t
+provide policy makers with answers.</p>
+</div>
+<div id="answering-our-policy-question" class="section level3">
+<h3>Answering our policy question</h3>
+<p>For a given question, here “Have I ordered enough COVID-19 tests” we
+can write functions to answer this question.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to evaluate our policy questions, </span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># i.e. how often would we order enough tests if based on predicted medians</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>total_overprediction <span class="ot">&lt;-</span> <span class="cf">function</span>(fc_all) {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  fc_all <span class="sc">%&gt;%</span> </span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(forecast_date, model) <span class="sc">%&gt;%</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">outcome =</span> <span class="fu">sum</span>(prediction) <span class="sc">&gt;</span> <span class="fu">sum</span>(true_value)) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span> </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(model) <span class="sc">%&gt;%</span> </span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">outcome =</span> scales<span class="sc">::</span><span class="fu">percent</span>(<span class="fu">mean</span>(outcome)))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>We could then apply this to our model forecasts to not only identify
+how often we would have correctly ordered sufficient tests:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create our answer to the question</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>test_procurement <span class="ot">&lt;-</span> fc_all <span class="sc">%&gt;%</span> </span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(model) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_map</span>(<span class="sc">~</span><span class="fu">total_overprediction</span>(.x), <span class="at">.keep =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_dfr</span>(bind_rows) <span class="sc">%&gt;%</span> </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Model =</span> model, <span class="st">`</span><span class="at">Sufficient Tests</span><span class="st">`</span> <span class="ot">=</span> outcome)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(test_procurement)</span></code></pre></div>
+<table>
+<thead>
+<tr class="header">
+<th align="left">Model</th>
+<th align="left">Sufficient Tests</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">arima</td>
+<td align="left">88%</td>
+</tr>
+<tr class="even">
+<td align="left">arima_tweet</td>
+<td align="left">90%</td>
+</tr>
+<tr class="odd">
+<td align="left">ensemble</td>
+<td align="left">90%</td>
+</tr>
+<tr class="even">
+<td align="left">ets</td>
+<td align="left">82%</td>
+</tr>
+</tbody>
+</table>
+<p>Clearly all the models are good at ensuring enough tests would be
+produced, and we can go back to our policy maker and say:</p>
+<blockquote>
+<p>“In the last 2 years, 9 times out of 10 you would have ordered enough
+tests.”</p>
+</blockquote>
+<p>Now that is a lot more helpful than:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in formal scores</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>fc_score <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">&quot;../forecast_evaluation/outputs/fc_score.csv&quot;</span>, <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(fc_score) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  kableExtra<span class="sc">::</span><span class="fu">kable_styling</span>(<span class="at">font_size =</span> <span class="dv">8</span>)</span></code></pre></div>
+<table class="table" style="font-size: 8px; margin-left: auto; margin-right: auto;">
+<thead>
+<tr>
+<th style="text-align:left;">
+model
+</th>
+<th style="text-align:left;">
+target_type
+</th>
+<th style="text-align:right;">
+interval_score
+</th>
+<th style="text-align:right;">
+dispersion
+</th>
+<th style="text-align:right;">
+underprediction
+</th>
+<th style="text-align:right;">
+overprediction
+</th>
+<th style="text-align:right;">
+coverage_deviation
+</th>
+<th style="text-align:right;">
+bias
+</th>
+<th style="text-align:right;">
+ae_median
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+arima
+</td>
+<td style="text-align:left;">
+Cases
+</td>
+<td style="text-align:right;">
+2300
+</td>
+<td style="text-align:right;">
+860
+</td>
+<td style="text-align:right;">
+56
+</td>
+<td style="text-align:right;">
+1300
+</td>
+<td style="text-align:right;">
+-0.00290
+</td>
+<td style="text-align:right;">
+0.60
+</td>
+<td style="text-align:right;">
+4100
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arima_tweet
+</td>
+<td style="text-align:left;">
+Cases
+</td>
+<td style="text-align:right;">
+2400
+</td>
+<td style="text-align:right;">
+920
+</td>
+<td style="text-align:right;">
+81
+</td>
+<td style="text-align:right;">
+1400
+</td>
+<td style="text-align:right;">
+-0.00480
+</td>
+<td style="text-align:right;">
+0.55
+</td>
+<td style="text-align:right;">
+4400
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ensemble
+</td>
+<td style="text-align:left;">
+Cases
+</td>
+<td style="text-align:right;">
+2700
+</td>
+<td style="text-align:right;">
+1100
+</td>
+<td style="text-align:right;">
+52
+</td>
+<td style="text-align:right;">
+1600
+</td>
+<td style="text-align:right;">
+-0.00190
+</td>
+<td style="text-align:right;">
+0.64
+</td>
+<td style="text-align:right;">
+4800
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ets
+</td>
+<td style="text-align:left;">
+Cases
+</td>
+<td style="text-align:right;">
+3600
+</td>
+<td style="text-align:right;">
+1600
+</td>
+<td style="text-align:right;">
+54
+</td>
+<td style="text-align:right;">
+2000
+</td>
+<td style="text-align:right;">
+-0.00095
+</td>
+<td style="text-align:right;">
+0.64
+</td>
+<td style="text-align:right;">
+6100
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="arent-these-biased-models-though" class="section level3">
+<h3>Aren’t these biased models though?</h3>
+<p>Clearly a model that overpredicts the total case incidence 90% of the
+time is biased. And we can definitely see that from the earlier model
+scoring table (all the <code>bias</code> values are much higher than 0,
+which indicats no bias). Here, we clearly see the disconnect between how
+researchers and forecast evaluators may view models and the questions
+and concerns that a different stakeholder may have.</p>
+<p>For example, let’s consider we are suporting the head of hospital
+procurment. They are using case incidence to prepare for the eventual
+demands on hospital capacity and will likely have a different question
+for us. For example:</p>
+<blockquote>
+<p>I have a limited budget and need to know whether to allocate more in
+the future.</p>
+</blockquote>
+<blockquote>
+<p>How confident are you that cases and thus hospital demand will
+increase in the future.</p>
+</blockquote>
+<p>Again, we can turn this into a generic function that summarises our
+forecasts:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Function to evaluate our policy questions, </span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># i.e. how often do we correctly predict if cases are going to increase. </span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>correctly_increases <span class="ot">&lt;-</span> <span class="cf">function</span>(fc_all) {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>fc_all <span class="sc">%&gt;%</span> </span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(forecast_date, model) <span class="sc">%&gt;%</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">prediction =</span> <span class="fu">sum</span>(prediction),</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>              <span class="at">true_value =</span> <span class="fu">sum</span>(true_value)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(model) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">lagged_prediction =</span> <span class="fu">lag</span>(prediction),</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>           <span class="at">lagged_true =</span> <span class="fu">lag</span>(true_value)) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(model, forecast_date) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(true_value <span class="sc">&gt;</span> lagged_true) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">outcome =</span> prediction <span class="sc">&gt;</span> lagged_prediction) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    na.omit <span class="sc">%&gt;%</span> </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(model) <span class="sc">%&gt;%</span> </span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">summarise</span>(<span class="at">outcome =</span> scales<span class="sc">::</span><span class="fu">percent</span>(<span class="fu">mean</span>(outcome)))</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>              </span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>We could again apply this to our model forecasts to answer how often
+we would have correctly forecast that cases would increase in the next
+two weeks:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create our answer to the question</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cases_increasing <span class="ot">&lt;-</span> fc_all <span class="sc">%&gt;%</span> </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(model) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_map</span>(<span class="sc">~</span><span class="fu">correctly_increases</span>(.x), <span class="at">.keep =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">map_dfr</span>(bind_rows) <span class="sc">%&gt;%</span> </span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">rename</span>(<span class="at">Model =</span> model, <span class="st">`</span><span class="at">Correctly Forecasts Cases Increasing</span><span class="st">`</span> <span class="ot">=</span> outcome)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(cases_increasing)</span></code></pre></div>
+<table>
+<thead>
+<tr>
+<th style="text-align:left;">
+Model
+</th>
+<th style="text-align:left;">
+Correctly Forecasts Cases Increasing
+</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left;">
+arima
+</td>
+<td style="text-align:left;">
+85%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+arima_tweet
+</td>
+<td style="text-align:left;">
+88%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ensemble
+</td>
+<td style="text-align:left;">
+85%
+</td>
+</tr>
+<tr>
+<td style="text-align:left;">
+ets
+</td>
+<td style="text-align:left;">
+73%
+</td>
+</tr>
+</tbody>
+</table>
+<p>Clearly all the models are not very good at forecasting if cases will
+increase, and we can go back to our head of hospital procurement and
+say:</p>
+<blockquote>
+<p>“In the last 2 years, more than 70% of the time we correctly
+predicted that cases would increase”</p>
+</blockquote>
+<p>We can also observe here that the different models start to perform
+quite differently. In fact, the best model is the ARIMA model that
+incorporated information based on trends in Twitter data - the
+non-traditional data added value!!!</p>
+<p>We may then want to put more weight on this model when constructing
+our ensemble, if the question we are concerned with is focussed on
+correctly predicting if cases increase in the next 2 weeks. However, if
+we solely weighted by mean absolute error, we would put more weight on
+the default ARIMA model.</p>
+<p>This brief example highlights the disconnect with how model
+forecasters often evaluate their models (frequently mean absolute error,
+or the weighted interval scored) and the performance of models for
+questions that different stakeholders have.</p>
+</div>
+<div id="can-policy-makers-answer-their-own-questions" class="section level3">
+<h3>Can policy makers answer their own questions?</h3>
+<p>… wouldn’t that be nice?</p>
+<p>Well, it could be possible. We have detailed how forecast data can be
+standardised and we show how simple functions can be used to provide
+summaries for specific questions. However, it is easy to see how we
+could generalise across frequently asked questions:</p>
+<ol style="list-style-type: decimal">
+<li>Do forecasts correctly identify increases/decreases?</li>
+<li>Do forecasts over/underpredict?</li>
+<li>How much do forecasts over/underpredict?</li>
+</ol>
+<p>These are the common questions that we as a team were asked during
+the pandemic, but to expand this we would need to conduct listening
+exercises, engaging researchers and stakeholders in different countries
+as well as individuals working on different diseases or research areas
+entirely. Forecast data structures are always the same and this lends
+the ability to a tool that can generalise human interpretable answers to
+be one with wide impact.</p>
+</div>
+
+
+
+<!-- code folding -->
+
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+
+</body>
+</html>
