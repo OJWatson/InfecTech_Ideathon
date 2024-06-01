@@ -8,8 +8,9 @@ save_figs <- function(name,
                       height = 6,
                       plot_dir = file.path(here::here(), "analysis/plots"),
                       pdf_plot = TRUE,
+                      jpg_plot = FALSE,
                       font_family = "Helvetica",
-                      res = 300,
+                      res = 150,
                       ...) {
 
   if(!is.null(font_family)) {
@@ -27,6 +28,17 @@ save_figs <- function(name,
                 ...)
   print(fig)
   dev.off()
+
+  if(jpg_plot) {
+    ragg::agg_jpeg(fig_path(paste0(name,".jpg")),
+                  width = width,
+                  height = height,
+                  units = "in",
+                  res = res,
+                  ...)
+    print(fig)
+    dev.off()
+  }
 
   if(pdf_plot) {
     pdf(file = fig_path(paste0(name,".pdf")), width = width, height = height)
@@ -52,7 +64,7 @@ cases_plot <- function(data) {
                       inherit.aes = FALSE) +
     ggplot2::ylab("Daily Number of COVID-19 Infections") +
     ggplot2::theme_bw()  +
-    ggplot2::scale_y_continuous(expand = c(0,0)) +
+    ggplot2::scale_y_continuous(limits = c(0, NA), expand = expansion(mult=c(0, 0.05))) +
     ggplot2::scale_x_date(date_breaks = "2 months", date_labels = "%b %Y") +
     ggplot2::theme(axis.text.x = ggplot2::element_text(angle = 45, hjust = 1, colour = "black"),
                    axis.title.x = ggplot2::element_blank(),
@@ -79,10 +91,11 @@ for(i in seq_along(isos)) {
 
   save_figs(paste0(isos[i]),
          cases_plot(jhu %>% filter(countryterritoryCode == isos[i])),
-         width = 8,
-         height = 6,
-         res = 300, plot_dir = "analysis/plots/country_plots/",
+         width = 6,
+         height = 4,
+         res = 150, plot_dir = "analysis/plots/country_plots/",
          font_family = "Helvetica"
           )
 
 }
+#
